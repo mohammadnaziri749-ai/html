@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نظام ارتقای بازاریابی درون‌گرا (Inbound Marketing) مش | فازهای B1 تا B4</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+  *{margin:0; padding:0; box-sizing:border-box}
+  body{
+    font-family:'Vazirmatn', Tahoma, sans-serif;
+    background:#f1f5f9;
+    color:#1e293b;
+    line-height:1.95;
+    font-size:15.5px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    max-width:980px;
+    margin:32px auto;
+    background:#ffffff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(15,23,42,0.08), 0 4px 16px rgba(15,23,42,0.06);
+    border:1px solid #e2e8f0;
+  }
+  /* COVER */
+  .cover{
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 45%, #0e7490 100%);
+    color:white;
+    padding:48px 52px 44px;
+    position:relative;
+    overflow:hidden;
+  }
+  .cover::after{
+    content:"";
+    position:absolute;
+    left:-80px; top:-80px;
+    width:360px; height:360px;
+    background:radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .cover-top{
+    display:flex; justify-content:space-between; align-items:center;
+    margin-bottom:36px;
+    position:relative; z-index:1;
+  }
+  .logo{
+    display:flex; align-items:center; gap:12px;
+  }
+  .logo-mark{
+    width:44px; height:44px;
+    background:white;
+    border-radius:12px;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:800; color:#0f172a; font-size:18px; letter-spacing:-0.5px;
+  }
+  .logo-text{font-size:13px; opacity:0.9; line-height:1.4}
+  .logo-text strong{font-size:15px; display:block; letter-spacing:0.5px}
+  .badge-cover{
+    background:rgba(255,255,255,0.14);
+    border:1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(8px);
+    padding:7px 14px; border-radius:100px;
+    font-size:12.5px; font-weight:500;
+  }
+  .cover h1{
+    font-size:32px; font-weight:800; line-height:1.35; margin-bottom:14px;
+    position:relative; z-index:1;
+  }
+  .cover h1 span{font-weight:300; opacity:0.92}
+  .cover .subtitle{
+    font-size:16.5px; opacity:0.88; font-weight:400; line-height:1.7;
+    max-width:720px; position:relative; z-index:1;
+  }
+  .cover-meta{
+    display:flex; gap:18px; margin-top:28px; flex-wrap:wrap;
+    position:relative; z-index:1;
+  }
+  .meta-pill{
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.15);
+    padding:8px 14px; border-radius:10px;
+    font-size:12.5px; display:flex; align-items:center; gap:8px;
+  }
+  .meta-pill b{font-weight:700}
+  /* TOC */
+  .toc{
+    background:#f8fafc;
+    border-bottom:1px solid #e2e8f0;
+    padding:28px 52px;
+  }
+  .toc h2{font-size:14px; font-weight:700; color:#0f172a; margin-bottom:16px; letter-spacing:0.3px}
+  .toc-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:10px 24px;
+  }
+  .toc-item{
+    display:flex; gap:10px; align-items:flex-start;
+    font-size:13.5px; color:#334155; text-decoration:none;
+    padding:8px 10px; border-radius:8px; transition:0.15s;
+  }
+  .toc-item:hover{background:white; box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+  .toc-num{
+    min-width:28px; height:28px; border-radius:8px;
+    background:white; border:1px solid #e2e8f0;
+    display:flex; align-items:center; justify-content:center;
+    font-size:11px; font-weight:700; color:#0e7490; flex-shrink:0;
+  }
+  /* CONTENT */
+  .content{padding:0 52px 48px}
+  .principle-box{
+    margin:32px 0 36px;
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border:1px solid #fcd34d;
+    border-radius:16px;
+    padding:22px 24px;
+    position:relative;
+  }
+  .principle-box::before{
+    content:"اصل بنیادین";
+    position:absolute; top:-10px; right:20px;
+    background:#f59e0b; color:white;
+    font-size:11px; font-weight:700; padding:3px 10px; border-radius:100px;
+  }
+  .principle-box p{font-size:14.5px; color:#92400e; line-height:1.85; margin-top:6px}
+  .principle-box strong{color:#78350f}
+  h2.section-title{
+    font-size:22px; font-weight:800; color:#0f172a;
+    margin:44px 0 8px; display:flex; align-items:center; gap:14px;
+    padding-bottom:12px; border-bottom:2px solid #f1f5f9;
+  }
+  .phase-badge{
+    font-size:11.5px; font-weight:700; letter-spacing:0.4px;
+    padding:6px 12px; border-radius:100px; color:white; flex-shrink:0;
+  }
+  .b1{background:#0e7490} .b2{background:#7c3aed} .b3{background:#059669} .b4{background:#dc2626}
+  .phase-desc{
+    font-size:14px; color:#64748b; margin:0 0 22px 0; line-height:1.8;
+    border-right:3px solid #e2e8f0; padding-right:14px;
+  }
+  h3{
+    font-size:16.5px; font-weight:700; color:#1e293b;
+    margin:28px 0 12px; display:flex; align-items:center; gap:10px;
+  }
+  h3 .h3-num{
+    width:26px; height:26px; border-radius:8px;
+    background:#f1f5f9; border:1px solid #e2e8f0;
+    display:flex; align-items:center; justify-content:center;
+    font-size:12px; font-weight:800; color:#334155; flex-shrink:0;
+  }
+  h4{font-size:14.5px; font-weight:700; color:#334155; margin:18px 0 8px}
+  p{margin:0 0 12px; color:#334155}
+  ul, ol{margin:0 20px 14px 0; color:#334155}
+  li{margin-bottom:6px}
+  li::marker{color:#94a3b8}
+  .card{
+    background:white; border:1px solid #e2e8f0; border-radius:14px;
+    padding:18px 20px; margin:14px 0;
+    box-shadow:0 2px 10px rgba(15,23,42,0.03);
+  }
+  .card-title{font-size:13px; font-weight:700; color:#0f172a; margin-bottom:8px; display:flex; align-items:center; gap:8px}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0}
+  .grid3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin:14px 0}
+  .info-card{
+    background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px;
+  }
+  .info-card .ic-title{font-size:13px; font-weight:700; color:#0f172a; margin-bottom:6px}
+  .info-card .ic-desc{font-size:13px; color:#64748b; line-height:1.7}
+  .highlight{
+    background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px;
+    padding:14px 16px; margin:14px 0; font-size:13.5px; color:#1e40af;
+  }
+  .highlight strong{color:#1e3a8a}
+  .warning{
+    background:#fef2f2; border:1px solid #fecaca; border-radius:12px;
+    padding:14px 16px; margin:14px 0; font-size:13.5px; color:#991b1b;
+  }
+  .success{
+    background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px;
+    padding:14px 16px; margin:14px 0; font-size:13.5px; color:#166534;
+  }
+  .table-wrap{overflow-x:auto; margin:16px 0; border:1px solid #e2e8f0; border-radius:12px}
+  table{width:100%; border-collapse:collapse; font-size:13.5px}
+  th{background:#f8fafc; font-weight:700; color:#0f172a; text-align:right; padding:12px 14px; border-bottom:1px solid #e2e8f0; white-space:nowrap}
+  td{padding:10px 14px; border-bottom:1px solid #f1f5f9; color:#334155; vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .tag{
+    display:inline-flex; align-items:center;
+    font-size:11px; font-weight:700; padding:3px 8px; border-radius:100px;
+    border:1px solid #e2e8f0; background:#f8fafc; color:#475569;
+  }
+  .tag-blue{background:#eff6ff; border-color:#bfdbfe; color:#1d4ed8}
+  .tag-green{background:#f0fdf4; border-color:#bbf7d0; color:#15803d}
+  .tag-amber{background:#fffbeb; border-color:#fde68a; color:#92400e}
+  .funnel{
+    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+    background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px;
+    padding:14px 16px; margin:14px 0; justify-content:center;
+  }
+  .funnel-step{
+    background:white; border:1px solid #e2e8f0; border-radius:10px;
+    padding:8px 12px; font-size:12.5px; font-weight:600; color:#334155;
+    text-align:center; min-width:92px; box-shadow:0 1px 4px rgba(0,0,0,0.04);
+  }
+  .funnel-arrow{color:#94a3b8; font-size:14px}
+  .timeline{
+    position:relative; margin:18px 0; padding-right:22px;
+    border-right:2px solid #e2e8f0;
+  }
+  .tl-item{position:relative; margin-bottom:18px; padding-right:18px}
+  .tl-item::before{
+    content:""; position:absolute; right:-9px; top:6px;
+    width:14px; height:14px; border-radius:50%;
+    background:white; border:3px solid #0e7490;
+  }
+  .tl-item h5{font-size:13.5px; font-weight:700; color:#0f172a; margin-bottom:4px}
+  .tl-item p{font-size:13px; color:#64748b; margin:0}
+  .cta-box{
+    display:flex; gap:12px; margin:14px 0; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 18px; border-radius:10px; font-size:13.5px; font-weight:700;
+    text-decoration:none; border:1px solid transparent; cursor:pointer;
+  }
+  .btn-primary{background:#0f172a; color:white}
+  .btn-secondary{background:white; color:#0f172a; border-color:#e2e8f0}
+  .url{
+    font-family:ui-monospace, monospace; direction:ltr; text-align:left;
+    background:#f8fafc; border:1px solid #e2e8f0; padding:2px 8px; border-radius:6px;
+    font-size:12.5px; color:#0e7490; display:inline-block;
+  }
+  .kpi-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0}
+  .kpi{
+    background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px;
+    padding:14px; text-align:center;
+  }
+  .kpi-num{font-size:20px; font-weight:800; color:#0f172a}
+  .kpi-label{font-size:11.5px; color:#64748b; margin-top:2px}
+  .divider{height:1px; background:#f1f5f9; margin:36px 0}
+  .footnote{
+    background:#f8fafc; border:1px dashed #cbd5e1; border-radius:12px;
+    padding:14px 16px; font-size:12.5px; color:#64748b; margin:18px 0;
+  }
+  .checklist{list-style:none; margin-right:0; padding:0}
+  .checklist li{
+    position:relative; padding-right:26px; margin-bottom:8px; font-size:13.5px;
+  }
+  .checklist li::before{
+    content:"✓"; position:absolute; right:0; top:1px;
+    width:18px; height:18px; border-radius:50%;
+    background:#dcfce7; color:#15803d; font-size:11px; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+    border:1px solid #bbf7d0;
+  }
+  @media(max-width:760px){
+    .page{margin:0; border-radius:0; border:none}
+    .cover, .toc, .content{padding-left:20px; padding-right:20px}
+    .toc-grid, .grid2, .grid3, .kpi-grid{grid-template-columns:1fr}
+    .cover h1{font-size:24px}
+    .funnel{justify-content:flex-start}
+  }
+  @media print{
+    body{background:white} .page{box-shadow:none; border:none; margin:0; border-radius:0}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-top">
+      <div class="logo">
+        <div class="logo-mark">MESH</div>
+        <div class="logo-text"><strong>مش — AgentHub</strong>اکوسیستم فروش محصولات هوش مصنوعی</div>
+      </div>
+      <div class="badge-cover">نسخه نهایی • شهریور ۱۴۰۴ / سپتامبر ۲۰۲۶</div>
+    </div>
+    <h1>نظام ارتقای بازاریابی درون‌گرا<br><span>Inbound Marketing Growth System</span></h1>
+    <p class="subtitle">طراحی، استقرار و مقیاس‌دهی موتور جذب، اعتمادسازی و تبدیل سازندگان (Creators) — از اولین بازدید تا اولین فروش. سندی یکپارچه برای فازهای <b>B1 تا B4</b>، کاملاً همسو با معماری فعلی محصول (Marketplace، Creator Studio، Wizard و Review).</p>
+    <div class="cover-meta">
+      <div class="meta-pill">▸ <b>مخاطب:</b> تیم محصول، مارکتینگ و رشد</div>
+      <div class="meta-pill">▸ <b>وضعیت:</b> فریز نهایی برای اجرا</div>
+      <div class="meta-pill">▸ <b>دامنه:</b> وب‌سایت عمومی → Creator Studio → Marketplace</div>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h2>فهرست — آنچه در این سند می‌خوانید</h2>
+    <div class="toc-grid">
+      <a class="toc-item" href="#principles"><span class="toc-num">۰</span> اصول کلیدی و جایگاه B1: دروازه، نه محصول</a>
+      <a class="toc-item" href="#b1"><span class="toc-num">B1</span> شالوده جذب سازنده — Creator Acquisition Foundation</a>
+      <a class="toc-item" href="#b2"><span class="toc-num">B2</span> اعتماد و تصمیم — Creator Trust & Decision</a>
+      <a class="toc-item" href="#b3"><span class="toc-num">B3</span> موتور جذب ارگانیک — Organic Acquisition Engine</a>
+      <a class="toc-item" href="#b4"><span class="toc-num">B4</span> موتور لید و تبدیل — Lead & Conversion Engine</a>
+      <a class="toc-item" href="#arch"><span class="toc-num">◆</span> معماری یکپارچه، شاخص‌ها و نقشه راه اجرا</a>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- PRINCIPLES -->
+    <div id="principles" class="principle-box">
+      <p><strong>تفاوت بنیادین را از ابتدا فریز می‌کنیم:</strong> فاز B1 «محصول داخل پنل» نیست؛ <strong>دروازه‌ی ورود سازنده به قیف</strong> است. یعنی <em>پیش از ورود به Creator Studio</em>، سازنده باید در وب‌سایت عمومی قانع شود که مش برای او چه ارزشی دارد، دقیقاً چه چیزی می‌تواند بفروشد و قدم بعدی چیست. طبق معماری فعلی، Marketplace عمومی، صفحه‌ی عمومی سازنده، مسیر <span class="url">/settings → تبدیل به سازنده</span> و مسیر <span class="url">/creator/agents/new</span> وجود دارد؛ B1 پل بین سایت عمومی و Creator Studio است، نه یک سیستم موازی.</p>
+    </div>
+
+    <div class="card" style="border-right:4px solid #0e7490">
+      <div class="card-title">🔷 هدف نهایی پس از اجرای کامل B1 تا B4</div>
+      <div class="funnel">
+        <div class="funnel-step">بازدیدکننده غریبه</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step">درک ارزش</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step">اعتماد</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step">ثبت‌نام</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step">Onboarding</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step">ساخت محصول</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step">انتشار</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step" style="background:#0f172a; color:white; border-color:#0f172a">فروش و رشد</div>
+      </div>
+      <p style="font-size:12.5px; color:#64748b; margin:8px 0 0; text-align:center">این قیف، زبان مشترک مارکتینگ و محصول است: <b>Acquire → Activate → Create → Review → Launch → Grow</b></p>
+    </div>
+
+    <!-- ================= B1 ================= -->
+    <h2 id="b1" class="section-title"><span class="phase-badge b1">فاز B1</span> شالوده‌ی جذب سازنده — Creator Acquisition Foundation</h2>
+    <p class="phase-desc">ماموریت B1: تبدیل بازدیدکننده‌ی کنجکاو به سازنده‌ی متقاعد و آماده‌ی ورود به Creator Onboarding. تمرکز این فاز «آموزش + شفاف‌سازی + قانع‌سازی» است، نه فروش شتاب‌زده.</p>
+
+    <h3><span class="h3-num">۱</span> لندینگ اصلی جذب سازنده</h3>
+    <p>یک لندینگ مستقل، متمرکز بر تبدیل (Conversion-Focused) و کاملاً مجزا از لندینگ خریداران.</p>
+    <div class="highlight">
+      <strong>URL پیشنهادی:</strong> <span class="url">/creators</span> به‌عنوان آدرس اصلی مارکتینگی · آدرس جایگزین/تغییرمسیر: <span class="url">/become-a-creator</span> · در آینده صفحات کمپینی مجزا (مثلاً <span class="url">/creators/ai-agents</span>) به همین هسته متصل می‌شوند.
+    </div>
+    <div class="card">
+      <div class="card-title">ساختار Hero (بالای صفحه)</div>
+      <p><strong>تیتر اصلی پیشنهادی:</strong> «آنچه ساخته‌ای را به محصولی قابل فروش تبدیل کن.»</p>
+      <p><strong>زیرتیتر:</strong> «ایجنت‌ها، اتوماسیون‌ها و ورک‌فلوهای هوش مصنوعی خودت را در مش معرفی کن، برای بررسی بفرست و به خریدارانی بفروش که دقیقاً به آن نیاز دارند.»</p>
+      <div class="cta-box">
+        <span class="btn btn-primary">شروع ساخت محصول ←</span>
+        <span class="btn btn-secondary">ببین چه چیزی می‌توانی بفروشی</span>
+      </div>
+      <p style="font-size:12.5px; color:#64748b">ویژوال: نمایی واقعی از Marketplace و Creator Studio (نه موکاپ انتزاعی). دکمه‌ی اول به ثبت‌نام/ورود و سپس Onboarding می‌رود؛ دکمه‌ی دوم به بخش «چه چیزی می‌توانم بفروشم؟» اسکرول می‌کند.</p>
+    </div>
+
+    <h3><span class="h3-num">۲</span> مهم‌ترین پیام B1: «من دقیقاً چه چیزی می‌توانم بفروشم؟»</h3>
+    <p>این بخش باید زودتر از هر چیز دیگری پاسخ داده شود — بزرگ‌ترین ابهام ذهنی سازنده همین است. مدل محصول مش ۷ نوع اصلی را پوشش می‌دهد (هم‌راستا با Wizard فعلی):</p>
+    <div class="grid3">
+      <div class="info-card"><div class="ic-title">🤖 AI Agent</div><div class="ic-desc">عامل هوشمند مستقل برای انجام وظیفه‌ی مشخص</div></div>
+      <div class="info-card"><div class="ic-title">💬 AI Assistant</div><div class="ic-desc">دستیار تعاملی برای پاسخ‌گویی و هدایت کاربر</div></div>
+      <div class="info-card"><div class="ic-title">⚙️ AI Workflow</div><div class="ic-desc">فرایند چندمرحله‌ای متصل به ابزارها و APIها</div></div>
+      <div class="info-card"><div class="ic-title">🔄 Automation</div><div class="ic-desc">اتوماسیون تکرارشونده برای حذف کار دستی</div></div>
+      <div class="info-card"><div class="ic-title">📄 Template</div><div class="ic-desc">قالب آماده‌ی قابل استقرار و سفارشی‌سازی</div></div>
+      <div class="info-card"><div class="ic-title">🔌 API / AI Service</div><div class="ic-desc">سرویس قابل فراخوانی توسط سایر سیستم‌ها</div></div>
+      <div class="info-card" style="grid-column: span 1"><div class="ic-title">🛠️ Setup Service</div><div class="ic-desc">خدمت نصب، پیکربندی و راه‌اندازی</div></div>
+    </div>
+    <div class="warning"><strong>اشتباه رایج:</strong> فقط نام بردن از این ۷ نوع کافی نیست. برای هر کدام باید ۵ سؤال را شفاف پاسخ دهیم: <b>چیست؟ چه چیزی تحویل خریدار می‌شود؟ چه کسی اجرایش می‌کند؟ کجا اجرا می‌شود؟ برای چه کسی مناسب است؟</b></div>
+    <div class="card">
+      <div class="card-title">نمونه‌ی توضیح استاندارد — AI Workflow</div>
+      <p><strong>تعریف:</strong> فرایندی آماده که چند گام کاری را با ابزارهای هوش مصنوعی و سرویس‌های دیگر به هم متصل می‌کند.</p>
+      <p><strong>مثال ملموس:</strong> دریافت فرم مشتری → تحلیل با AI → ثبت در CRM → ارسال ایمیل خودکار.</p>
+      <p><strong>مناسب برای:</strong> تیم‌های فروش و عملیات که می‌خواهند زمان پردازش لید را از ساعت به دقیقه برسانند.</p>
+    </div>
+
+    <h3><span class="h3-num">۳</span> مسیر «چگونه کار می‌کند؟» — روایی، نه اداری</h3>
+    <p>به‌جای برچسب‌های خشکِ «Register → Create → Submit → Review → Publish»، یک داستان ۵ مرحله‌ای قابل فهم:</p>
+    <div class="timeline">
+      <div class="tl-item"><h5>۱ — بساز</h5><p>محصول AI خودت را با ابزارهایی که همین امروز استفاده می‌کنی بساز. مش در این مرحله Builder نیست؛ مسیر محصول‌سازی را استاندارد می‌کند.</p></div>
+      <div class="tl-item"><h5>۲ — معرفی کن</h5><p>مشخص کن محصول چه می‌کند، برای چه کسی است، چه می‌خواهد و چگونه تحویل داده می‌شود.</p></div>
+      <div class="tl-item"><h5>۳ — ارسال برای بررسی</h5><p>مش محصول را از نظر کیفیت، امنیت و کامل بودن اطلاعات بررسی می‌کند (پس از تکمیل Readiness و تأیید پروفایل سازنده).</p></div>
+      <div class="tl-item"><h5>۴ — منتشر کن</h5><p>پس از تأیید، محصول در Marketplace قرار می‌گیرد و قابل کشف و خرید می‌شود.</p></div>
+      <div class="tl-item"><h5>۵ — بفروش و رشد کن</h5><p>خریداران پیدایت می‌کنند، می‌خرند، بازخورد می‌دهند و تو محصول را بهبود می‌دهی.</p></div>
+    </div>
+
+    <h3><span class="h3-num">۴</span> «برای شروع چه چیزی لازم دارم؟» — کاهش اصطکاک ذهنی</h3>
+    <div class="grid2">
+      <div class="success"><strong>لازم نیست:</strong><ul style="margin-top:8px"><li>برنامه‌نویس حرفه‌ای باشی</li><li>محصولِ بسیار پیچیده داشته باشی</li><li>زیرساخت اختصاصی مش داشته باشی</li><li>حتماً سابقه‌ی فروش قبلی داشته باشی</li></ul></div>
+      <div class="highlight"><strong>باید داشته باشی:</strong><ul style="margin-top:8px"><li>محصولی واقعی و قابل استفاده</li><li>توضیح شفافِ کاربرد و مخاطب</li><li>مدل تحویل (Delivery) مشخص</li><li>نیازمندی‌ها و پیش‌نیازها</li><li>اطلاعات امنیتی و داده‌ای</li><li>مسئولیت‌ها و محدودیت‌های روشن</li></ul></div>
+    </div>
+    <div class="footnote">نکته‌ی تعهد: مش نباید وانمود کند که Runtime یا زیرساخت اجرای همه‌ی محصولات را فراهم می‌کند. مدل اجرا (Execution) باید برای هر محصول صادقانه و شفاف اعلام شود.</div>
+
+    <h3><span class="h3-num">۵</span> «مش برای من چه می‌کند؟» — ارزش واقعی پلتفرم</h3>
+    <div class="grid3">
+      <div class="info-card"><div class="ic-title">📦 Productize</div><div class="ic-desc">تبدیل ساخته‌ات به پیشنهادی قابل فهم برای خریدار</div></div>
+      <div class="info-card"><div class="ic-title">✅ Validate</div><div class="ic-desc">چک‌لیست کامل‌بودن اطلاعات پیش از ارسال</div></div>
+      <div class="info-card"><div class="ic-title">🔍 Review</div><div class="ic-desc">بررسی کیفیت و امنیت پیش از انتشار</div></div>
+      <div class="info-card"><div class="ic-title">📣 Distribute</div><div class="ic-desc">قرار گرفتن در ویترین Marketplace در معرض خریداران</div></div>
+      <div class="info-card"><div class="ic-title">💳 Sell</div><div class="ic-desc">مدیریت پرداخت، سفارش و تحویل از طریق پلتفرم</div></div>
+      <div class="info-card"><div class="ic-title">📈 Grow</div><div class="ic-desc">استفاده از فروش، Reviews و Analytics برای رشد</div></div>
+    </div>
+
+    <h3><span class="h3-num">۶</span> اقتصاد سازنده — چرا این مسیر می‌ارزد؟</h3>
+    <p>سازنده باید منطق اقتصادی را در یک نگاه بفهمد: <b>می‌سازی → منتشر می‌کنی → دیده می‌شوی → می‌فروشی → بهبود می‌دهی → محصول بعدی.</b></p>
+    <div class="warning"><strong>پرهیز از وعده‌ی عددی:</strong> تا زمانی که مدل کارمزد، سهم سازنده، زمان تسویه، حداقل برداشت، قوانین Refund و مالیات به‌صورت قطعی تصویب نشده، هیچ عدد یا درصدی در لندینگ وعده داده نمی‌شود. در عوض، منطق و معیارها شفاف توضیح داده می‌شود و جای اعداد با برچسب «به‌زودی» مشخص می‌گردد.</div>
+
+    <h3><span class="h3-num">۷</span> اعتماد — «اگر محصولم را بدهم، چه می‌شود؟»</h3>
+    <div class="card">
+      <p>بخش Trust باید پیش از ثبت‌نام به این دغدغه‌ها پاسخ دهد:</p>
+      <ul class="checklist">
+        <li>مالکیت محصول متعلق به سازنده باقی می‌ماند</li>
+        <li>فرایند و معیارهای بررسی شفاف است</li>
+        <li>قوانین انتشار و آنچه عمومی می‌شود از پیش مشخص است</li>
+        <li>مسئولیت‌های سازنده و نحوه‌ی مدیریت تخلف روشن است</li>
+        <li>شرایط تعلیق/حذف، پشتیبانی و دریافت درآمد تعریف شده است</li>
+      </ul>
+      <p style="font-size:12.5px; color:#64748b">این بخش با سازوکار فعلی ادمین (بررسی، تعلیق و لغو انتشار) هم‌راستا طراحی می‌شود.</p>
+    </div>
+
+    <h3><span class="h3-num">۸</span> نمونه‌های واقعی — به‌جای توضیح انتزاعی</h3>
+    <div class="grid3">
+      <div class="card" style="margin:0"><div class="card-title">مثال ۱ — AI Customer Support Agent</div><p style="font-size:13px"><b>برای:</b> تیم‌های پشتیبانی<br><b>تحویل:</b> Agent + پیکربندی<br><b>ارزش:</b> کاهش ۶۰٪ زمان پاسخ‌گویی اولیه</p><span class="tag tag-blue">پشتیبانی</span></div>
+      <div class="card" style="margin:0"><div class="card-title">مثال ۲ — Lead Qualification Workflow</div><p style="font-size:13px"><b>برای:</b> تیم فروش<br><b>تحویل:</b> Workflow + راهنمای نصب<br><b>ارزش:</b> امتیازدهی خودکار لیدها</p><span class="tag tag-green">فروش</span></div>
+      <div class="card" style="margin:0"><div class="card-title">مثال ۳ — Invoice Processing Automation</div><p style="font-size:13px"><b>برای:</b> کسب‌وکارهای کوچک<br><b>تحویل:</b> Automation + اتصال‌ها<br><b>ارزش:</b> حذف ورود دستی فاکتور</p><span class="tag tag-amber">عملیات</span></div>
+    </div>
+    <p style="text-align:center; font-size:13px; color:#0e7490; margin-top:10px; font-weight:600">— محصول تو هم می‌تواند چیزی شبیه این باشد —</p>
+
+    <h3><span class="h3-num">۹</span> پیش‌نمایش سفر سازنده (Journey Preview)</h3>
+    <div class="funnel">
+      <div class="funnel-step">Discover</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Create</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Submit</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Review</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Publish</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Sell</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step" style="background:#0e7490; color:white">Grow</div>
+    </div>
+    <p style="font-size:13px; color:#64748b">هر گام قابل کلیک است؛ مثلاً کلیک روی <b>Review</b> توضیح می‌دهد: «تیم مش اطلاعات محصول را بررسی می‌کند و اگر اصلاحی لازم باشد، دقیق و شفاف به تو اعلام می‌کند.» این بخش مستقیماً به فازهای A1 تا A5 داخل Creator Studio متصل است.</p>
+
+    <h3><span class="h3-num">۱۰</span> پرسش‌های متداول — رفع اعتراض‌های واقعی</h3>
+    <div class="grid2">
+      <div class="info-card"><div class="ic-title">آیا باید برنامه‌نویس باشم؟</div><div class="ic-desc">نه لزوماً. اگر محصولت مسئله‌ای واقعی را حل می‌کند و تحویلش شفاف است، می‌توانی منتشر کنی.</div></div>
+      <div class="info-card"><div class="ic-title">آیا مش ایجنت من را می‌سازد؟</div><div class="ic-desc">خیر. تو با ابزار خودت می‌سازی؛ مش مسیر معرفی، بررسی و عرضه را فراهم می‌کند.</div></div>
+      <div class="info-card"><div class="ic-title">محصولم کجا اجرا می‌شود؟</div><div class="ic-desc">بسته به Delivery و Runtime انتخابی تو. این موضوع در صفحه‌ی محصول کاملاً شفاف اعلام می‌شود.</div></div>
+      <div class="info-card"><div class="ic-title">اگر محصول رد شود چه؟</div><div class="ic-desc">بازخورد دقیق می‌گیری، اصلاح می‌کنی و دوباره ارسال می‌کنی — بدون از دست رفتن اطلاعات.</div></div>
+    </div>
+
+    <h3><span class="h3-num">۱۱</span> فراخوان نهایی (CTA انتهایی)</h3>
+    <div class="card" style="text-align:center; background:linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%)">
+      <p style="font-size:16px; font-weight:700; color:#0f172a">محصول هوش مصنوعی‌ات را برای فروش آماده کن</p>
+      <p style="font-size:13px; color:#64748b">قدم بعدی فقط چند دقیقه فاصله دارد — از همین‌جا وارد مسیر سازندگی شو.</p>
+      <div class="cta-box" style="justify-content:center"><span class="btn btn-primary">شروع به‌عنوان سازنده</span><span class="btn btn-secondary">اول ببین چه چیزی می‌توانی بفروشی</span></div>
+    </div>
+
+    <h3><span class="h3-num">۱۲</span> مسیر پس از کلیک — بدون پرتاب به داشبورد شلوغ</h3>
+    <div class="funnel">
+      <div class="funnel-step">لندینگ سازندگان</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">ثبت‌نام / ورود</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Onboarding</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Getting Started</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">پروفایل سازنده</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step" style="background:#0f172a; color:white">ساخت اولین محصول</div>
+    </div>
+    <p style="font-size:13px; color:#64748b">این مسیر روی ساختار موجود سوار می‌شود (<span class="url">/creator/agents/new</span>) و مستقیماً به A1 متصل است — نه یک مسیر موازی جدید.</p>
+
+    <h3><span class="h3-num">۱۳</span> صفحه‌ی مستقل «چه چیزی می‌توانم بفروشم؟»</h3>
+    <p>این صفحه یک دارایی قدرتمند سئو و تبدیل است، نه فقط یک سکشن:</p>
+    <p><span class="url">/creators/what-can-i-sell</span></p>
+    <div class="card">
+      <p><strong>ساختار پیشنهادی:</strong></p>
+      <div class="funnel" style="font-size:11.5px">
+        <div class="funnel-step">عنوان و وعده</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step">۷ نوع محصول</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step">مثال‌ها</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step">تحویل خریدار</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step">محل اجرا</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step">مسئولیت‌ها</div><span class="funnel-arrow">←</span>
+        <div class="funnel-step" style="background:#0e7490; color:white">شروع ساخت</div>
+      </div>
+    </div>
+
+    <h3><span class="h3-num">۱۴</span> صفحه‌ی مستقل «چگونه کار می‌کند؟»</h3>
+    <p><span class="url">/creators/how-it-works</span> — هر مرحله به قابلیت واقعی محصول لینک می‌شود:</p>
+    <div class="table-wrap"><table><tr><th>مرحله</th><th>اتصال به محصول</th></tr><tr><td><b>Submit</b></td><td>Creator Studio — Wizard</td></tr><tr><td><b>Review</b></td><td>وضعیت بررسی (Review Status)</td></tr><tr><td><b>Publish</b></td><td>Launch & Listing</td></tr><tr><td><b>Grow</b></td><td>Analytics سازنده</td></tr></table></div>
+
+    <h3><span class="h3-num">۱۵</span> هم‌زبانی کامل با A1 تا A5</h3>
+    <div class="funnel">
+      <div class="funnel-step" style="background:#e0f2fe; border-color:#7dd3fc">B1<br><small>Become a Creator</small></div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">A1<br><small>Get Started</small></div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">A2<br><small>Create Product</small></div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">A3<br><small>Submit for Review</small></div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">A4<br><small>Launch</small></div><span class="funnel-arrow">←</span>
+      <div class="funnel-step" style="background:#0f172a; color:white">A5<br><small>Grow</small></div>
+    </div>
+    <p style="font-size:13px; color:#64748b">تمام اصطلاحات، برچسب‌ها و وضعیت‌ها باید بین لندینگ و پنل یکسان باشد. تیم مارکتینگ و محصول دو زبان جدا نمی‌سازند.</p>
+
+    <h3><span class="h3-num">۱۶</span> چه چیزی را فعلاً نمی‌سازیم؟ — پرهیز از Overbuilding</h3>
+    <div class="warning">در B1 عمداً <b>نمی‌سازیم</b>: Builder اختصاصی، Community/Forum پیچیده، شبکه‌ی اجتماعی سازندگان، سیستم Affiliate سنگین، آکادمی بزرگ و گیمیفیکیشن مفصل. اول باید قیف اصلی بدون نقص کار کند.</div>
+
+    <h3><span class="h3-num">۱۷</span> شاخص‌های کلیدی B1</h3>
+    <div class="table-wrap"><table><tr><th>رویداد</th><th>معنا</th><th>هدف</th></tr><tr><td><span class="tag">creator_landing_view</span></td><td>ورود به لندینگ</td><td>جذب</td></tr><tr><td><span class="tag tag-blue">creator_cta_click</span></td><td>کلیک CTA اصلی</td><td>علاقه</td></tr><tr><td><span class="tag tag-green">creator_signup_completed</span></td><td>ثبت‌نام موفق</td><td>تبدیل</td></tr><tr><td><span class="tag tag-amber">first_product_started</span></td><td>شروع اولین محصول</td><td>فعال‌سازی</td></tr></table></div>
+    <div class="kpi-grid">
+      <div class="kpi"><div class="kpi-num">۱۰۰۰</div><div class="kpi-label">بازدید لندینگ</div></div>
+      <div class="kpi"><div class="kpi-num">۱۵٪</div><div class="kpi-label">نرخ کلیک CTA</div></div>
+      <div class="kpi"><div class="kpi-num">۸٪</div><div class="kpi-label">ثبت‌نام</div></div>
+      <div class="kpi"><div class="kpi-num">۲۵٪</div><div class="kpi-label">شروع محصول از ثبت‌نام</div></div>
+    </div>
+
+    <h3><span class="h3-num">۱۸</span> جمع‌بندی B1 — خروجی فریز شده</h3>
+    <div class="table-wrap"><table><tr><th>بخش</th><th>خروجی نهایی</th></tr><tr><td>Creator Landing</td><td>لندینگ اصلی جذب با Hero، ارزش پیشنهادی و CTA دوگانه</td></tr><tr><td>What Can I Sell</td><td>توضیح ۷ نوع محصول + تحویل، اجرا و مسئولیت</td></tr><tr><td>Examples + How It Works</td><td>۳ نمونه واقعی + مسیر ۵ مرحله‌ای روایی</td></tr><tr><td>Value / Economics / Trust</td><td>ارزش مش، منطق اقتصادی (بدون وعده‌ی عددی) و اعتماد</td></tr><tr><td>صفحات مستقل</td><td><span class="url">/what-can-i-sell</span> و <span class="url">/how-it-works</span> برای سئو و آموزش</td></tr><tr><td>اتصال و اندازه‌گیری</td><td>هم‌زبانی با A1–A5 و Funnel Analytics کامل</td></tr></table></div>
+    <div class="success"><strong>تعریف موفقیت B1:</strong> B1 فقط یک لندینگ نیست؛ یک <b>نظام آموزش + احراز صلاحیت + تبدیل</b> است. سازنده پیش از ورود به پنل باید دقیقاً بداند چه می‌سازد، چه می‌فروشد، خریدار چه تحویل می‌گیرد، نقش مش چیست و قدم بعدی کدام است.</div>
+
+    <div class="divider"></div>
+
+    <!-- ================= B2 ================= -->
+    <h2 id="b2" class="section-title"><span class="phase-badge b2">فاز B2</span> اعتماد و تصمیم — Creator Trust & Decision</h2>
+    <p class="phase-desc">اگر B1 به سؤال «مش چیست و آیا می‌توانم اینجا بفروشم؟» پاسخ می‌دهد، B2 به چهار سؤال نهایی قبل از تصمیم پاسخ می‌دهد: چه کسانی مثل من موفق شدند؟ برای شروع چه دارم؟ اگر سؤال داشتم کجا بپرسم؟ و از نظر مالی چه عایدم می‌شود؟</p>
+
+    <div class="grid2">
+      <div class="card" style="border-right:4px solid #7c3aed"><div class="card-title">چهار ستون B2</div><ul style="margin-top:8px"><li><b>Creator Stories</b> — اثبات اجتماعی</li><li><b>Creator Resources</b> — کاهش اصطکاک شروع</li><li><b>FAQ</b> — حذف ابهام</li><li><b>Pricing / Economics</b> — شفافیت مالی</li></ul></div>
+      <div class="highlight"><strong>جایگاه در قیف:</strong><div class="funnel" style="margin-top:10px; background:white"><div class="funnel-step">B1</div><span class="funnel-arrow">←</span><div class="funnel-step" style="background:#7c3aed; color:white">B2 اعتماد</div><span class="funnel-arrow">←</span><div class="funnel-step">B3 جذب ارگانیک</div><span class="funnel-arrow">←</span><div class="funnel-step">B4 تبدیل</div></div></div>
+    </div>
+
+    <h3><span class="h3-num">۲.۱</span> داستان سازندگان — Creator Stories</h3>
+    <p>نه یک دیوار Testimonial، بلکه روایت مسیر واقعی افراد با شرایط متفاوت.</p>
+    <div class="card">
+      <div class="card-title">ساختار Hero این بخش</div>
+      <p><strong>تیتر:</strong> «سازندگان واقعی، محصولات واقعی، نتایج واقعی»</p>
+      <p><strong>زیرتیتر:</strong> «ببین سازندگان دیگر چه ساختند، از کجا شروع کردند و چگونه به اولین مشتری رسیدند.»</p>
+      <div class="cta-box"><span class="btn btn-primary" style="background:#7c3aed">دیدن داستان سازندگان</span><span class="btn btn-secondary">من هم می‌خواهم شروع کنم</span></div>
+    </div>
+    <h4>کارت هر داستان باید شامل باشد:</h4>
+    <div class="grid2">
+      <div class="info-card"><div class="ic-title">هویت و محصول</div><div class="ic-desc">نام/هویت سازنده، نوع محصول، مسئله‌ای که حل می‌کند</div></div>
+      <div class="info-card"><div class="ic-title">مسیر</div><div class="ic-desc">انگیزه‌ی ساخت، نقطه‌ی شروع، سخت‌ترین بخش، نحوه‌ی آماده‌سازی برای مش</div></div>
+      <div class="info-card"><div class="ic-title">نقطه‌ی عطف</div><div class="ic-desc">چگونه اولین فروش اتفاق افتاد</div></div>
+      <div class="info-card"><div class="ic-title">آموخته</div><div class="ic-desc">یک درس کلیدی قابل انتقال به خواننده</div></div>
+    </div>
+    <div class="warning"><strong>خط قرمز:</strong> عدد و ادعای ساختگی ممنوع. اگر داده‌ی فروشی هنوز محدود است، به‌جای «در ۷ روز ۱۰۰ فروش» از Case Study صادقانه و آموزشی استفاده می‌کنیم.</div>
+    <div class="card">
+      <div class="card-title">ساختار صفحه‌ی جزئیات هر داستان</div>
+      <div class="funnel"><div class="funnel-step">Before</div><span class="funnel-arrow">←</span><div class="funnel-step">Build</div><span class="funnel-arrow">←</span><div class="funnel-step">Launch</div><span class="funnel-arrow">←</span><div class="funnel-step">First Sale</div><span class="funnel-arrow">←</span><div class="funnel-step" style="background:#7c3aed; color:white">Learnings</div></div>
+      <p style="font-size:13px; color:#64748b; margin-top:8px">دسته‌بندی و فیلتر: AI Agent · Automation · Workflow · Template · API · مبتدی / حرفه‌ای — CTA انتهای هر داستان: «آماده‌ای محصول خودت را بسازی؟» یا «هنوز نمی‌دانی چه بسازی؟ ایده‌ها را ببین.»</p>
+    </div>
+
+    <h3><span class="h3-num">۲.۲</span> مرکز منابع سازندگان — Creator Resource Hub</h3>
+    <p>یک کتابخانه‌ی عملی و متمرکز، نه صفحه‌ای از لینک‌های پراکنده. هر آنچه برای تبدیل «ایده → محصول قابل فروش → اولین فروش» لازم است، یک‌جا.</p>
+    <div class="grid2">
+      <div class="card" style="margin:0">
+        <div class="card-title">📘 دسته‌ها</div>
+        <p style="font-size:13px"><b>شروع:</b> مش چیست؟ چه چیزی محصول محسوب می‌شود؟ یافتن ایده و اعتبارسنجی بازار<br><b>ساخت:</b> انتخاب Product Type، Delivery، Runtime، طراحی Workflow، تست و مستندسازی<br><b>آماده‌سازی برای مش:</b> Readiness، Security Disclosure، قیمت‌گذاری، صفحه‌ی محصول، Preview، Submission</p>
+      </div>
+      <div class="card" style="margin:0">
+        <div class="card-title">📈 فروش و رشد</div>
+        <p style="font-size:13px"><b>فروش:</b> صفحه‌ی محصول قانع‌کننده، قیمت‌گذاری، Demo، گرفتن Review، اولین مشتری<br><b>رشد:</b> بهینه‌سازی تبدیل، افزایش فروش، محصول دوم، Analytics، Promotion</p>
+      </div>
+    </div>
+    <div class="success"><strong>قالب استاندارد هر منبع:</strong> هدف → چرا مهم است → گام‌ها → مثال واقعی → چک‌لیست → قدم بعدی (CTA به Creator Studio). هر مقاله با یک دعوت به اقدام مشخص تمام می‌شود.</div>
+
+    <h3><span class="h3-num">۲.۳</span> پرسش‌های متداول — FAQ مبتنی بر اعتراض واقعی</h3>
+    <div class="grid2">
+      <div class="info-card"><div class="ic-title">درباره‌ی مش</div><div class="ic-desc">مش چیست؟ چه چیزی می‌توانم بفروشم؟ چه کسانی می‌توانند سازنده شوند؟ آیا برنامه‌نویسی لازم است؟</div></div>
+      <div class="info-card"><div class="ic-title">ساخت و انتشار</div><div class="ic-desc">کجا می‌سازم؟ آیا مش Builder دارد؟ ارسال برای بررسی چگونه است؟ بررسی چقدر طول می‌کشد؟ چرا رد می‌شود؟ آیا آپدیت ممکن است؟</div></div>
+      <div class="info-card"><div class="ic-title">مالکیت</div><div class="ic-desc">مالک کیست؟ آیا کد/Workflow متعلق به من می‌ماند؟ آیا می‌توانم محصول را خارج کنم؟</div></div>
+      <div class="info-card"><div class="ic-title">درآمد</div><div class="ic-desc">سهم من چقدر است؟ تسویه چه زمانی است؟ Refund و محصول رایگان چگونه است؟</div></div>
+      <div class="info-card"><div class="ic-title">اعتماد و امنیت</div><div class="ic-desc">بررسی چگونه است؟ چه داده‌ای از خریدار به محصول می‌رسد؟ مسئول امنیت کیست؟</div></div>
+      <div class="info-card"><div class="ic-title">رشد</div><div class="ic-desc">آیا مش بازاریابی می‌کند؟ چگونه اولین فروش را بگیرم؟ Promotion چگونه است؟</div></div>
+    </div>
+
+    <h3><span class="h3-num">۲.۴</span> اقتصاد و قیمت‌گذاری — Pricing / Economics</h3>
+    <p>مهم‌ترین بخش B2 برای تصمیم نهایی سازنده.</p>
+    <div class="card">
+      <div class="card-title">۱ — مدل درآمدی در یک نگاه</div>
+      <div class="funnel"><div class="funnel-step">قیمت محصول</div><span class="funnel-arrow">−</span><div class="funnel-step">سهم پلتفرم</div><span class="funnel-arrow">=</span><div class="funnel-step" style="background:#7c3aed; color:white">سهم سازنده</div></div>
+      <p style="font-size:12.5px; color:#64748b; margin-top:8px">با یک مثال ساده و بدون وعده‌ی درآمد. اگر مدل قطعی نشده، عبارت «سهم سازنده پس از کسر کارمزد پلتفرم و هزینه‌های پرداخت» با برچسب «جزئیات به‌زودی» نمایش داده شود.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">۲ — ماشین‌حساب درآمد (پیشنهاد قطعی)</div>
+      <p style="font-size:13px">ورودی: قیمت محصول × فروش ماهانه → خروجی: درآمد ناخالص → کارمزد پلتفرم → <b>درآمد تخمینی سازنده (ماهانه/سالانه)</b></p>
+      <div class="grid3">
+        <div class="kpi"><div class="kpi-num">۱۰</div><div class="kpi-label">فروش — شروع</div></div>
+        <div class="kpi"><div class="kpi-num">۵۰</div><div class="kpi-label">فروش — رشد</div></div>
+        <div class="kpi"><div class="kpi-num">۲۰۰</div><div class="kpi-label">فروش — موفقیت</div></div>
+      </div>
+      <div class="warning" style="margin-top:12px"><strong>الزام شفافیت:</strong> زیر هر سناریو با فونت خوانا بنویسیم: «این پیش‌بینی درآمد نیست؛ مثال محاسباتی است.»</div>
+    </div>
+    <div class="table-wrap"><table><tr><th>سؤال کلیدی</th><th>باید پاسخ داشته باشد؟</th></tr><tr><td>قیمت را چه کسی تعیین می‌کند؟</td><td>✅</td></tr><tr><td>سهم مش چقدر است؟</td><td>✅</td></tr><tr><td>زمان و آستانه‌ی پرداخت؟</td><td>✅</td></tr><tr><td>Refund / Chargeback / مالیات؟</td><td>✅</td></tr><tr><td>محصول رایگان و Promotion پولی؟</td><td>✅</td></tr></table></div>
+    <p style="font-size:13px; color:#64748b">هر موردی که هنوز تصمیم‌گیری نشده، به‌صورت «در حال نهایی‌سازی» برچسب بخورد — نه حدس و نه سکوت.</p>
+
+    <div class="card" style="background:#f5f3ff; border-color:#ddd6fe">
+      <div class="card-title">اتصال B2 به قیف — ناوبری پیشنهادی</div>
+      <div class="funnel" style="background:white"><div class="funnel-step">Landing</div><span class="funnel-arrow">←</span><div class="funnel-step">How it Works</div><span class="funnel-arrow">←</span><div class="funnel-step">What Can I Sell</div><span class="funnel-arrow">←</span><div class="funnel-step" style="background:#7c3aed; color:white">Stories</div><span class="funnel-arrow">←</span><div class="funnel-step">Resources</div><span class="funnel-arrow">←</span><div class="funnel-step">FAQ/Economics</div><span class="funnel-arrow">←</span><div class="funnel-step">Start</div></div>
+      <p style="font-size:12.5px; color:#6b7280; margin-top:10px; text-align:center">منوی «برای سازندگان»: شروع کار · چگونه کار می‌کند؟ · چه چیزی بفروشم؟ · داستان سازندگان · منابع · پرسش‌ها · درآمد · شروع ساخت — حس ورود به یک Creator Program، نه صرفاً یک Marketplace.</p>
+    </div>
+    <div class="highlight"><strong>اتوماسیون هوشمند B2:</strong> محتوا باید با چرخه‌ی عمر سازنده گره بخورد — دیده B1 ولی ثبت‌نام نکرده → نمایش Story مرتبط؛ ثبت‌نام کرده ولی محصول نساخته → منبع Getting Started؛ محصول ساخته ولی Submit نکرده → محتوای Readiness؛ محصول Submit شده → محتوای Launch/First Sale.</div>
+    <div class="success"><strong>تعریف موفقیت B2:</strong> سازنده بدون نیاز به تماس با تیم، به این چهار اطمینان برسد: «دیگران توانسته‌اند — می‌دانم چطور شروع کنم — جواب سؤالاتم را دارم — می‌فهمم چه عایدم می‌شود.»</div>
+
+    <div class="divider"></div>
+
+    <!-- ================= B3 ================= -->
+    <h2 id="b3" class="section-title"><span class="phase-badge b3">فاز B3</span> موتور جذب ارگانیک — Organic Acquisition Engine</h2>
+    <p class="phase-desc">اگر B2 اعتماد می‌سازد، B3 ترافیک پایدار می‌آورد. B3 «وبلاگ» نیست؛ یک موتور تولید تقاضای ارگانیکِ مسئله‌محور است که هر جستجوی مرتبط با «کاری که مش می‌تواند انجام دهد» را به نقطه‌ی ورود تبدیل می‌کند.</p>
+
+    <div class="principle-box" style="background:linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-color:#6ee7b7">
+      <p style="color:#065f46"><strong style="color:#064e3b">قاعده‌ی طلایی B3:</strong> هیچ صفحه‌ی نازک (Thin Content)، هیچ انباشت کلمه‌ی کلیدی و هیچ یکتاییِ جعلی. هر صفحه باید برای یک <b>Search Intent</b> مشخص، ارزش واقعی و CTA متناسب داشته باشد.</p>
+    </div>
+
+    <h3><span class="h3-num">۱</span> موتور محتوای سئو — چهار لایه‌ی نیت</h3>
+    <div class="table-wrap"><table><tr><th>لایه</th><th>هدف</th><th>نمونه کوئری</th><th>CTA متناسب</th></tr><tr><td><span class="tag tag-blue">Awareness</span></td><td>جذب اولیه</td><td>AI automation ideas</td><td>یادگیری بیشتر</td></tr><tr><td><span class="tag tag-amber">Problem</span></td><td>حل مسئله</td><td>automate customer support</td><td>دیدن راه‌حل‌ها</td></tr><tr><td><span class="tag tag-green">Solution</span></td><td>معرفی راه‌حل</td><td>AI agent for customer support</td><td>مشاهده محصولات آماده</td></tr><tr><td><span class="tag" style="background:#ede9fe; border-color:#c4b5fd; color:#6d28d9">Creator</span></td><td>جذب سازنده</td><td>how to sell AI agents</td><td>فروش محصول خودت در مش</td></tr></table></div>
+    <p style="font-size:13px; color:#64748b">اولویت تولید: <b>Problem + Solution + Creator Intent</b> — نه مقالات عمومیِ «AI چیست؟».</p>
+
+    <div class="grid3">
+      <div class="info-card"><div class="ic-title">🤖 هاب AI Agents</div><div class="ic-desc">AI Agent چیست؟ چگونه بسازیم؟ برای فروش / پشتیبانی / HR / مارکتینگ</div></div>
+      <div class="info-card"><div class="ic-title">⚙️ هاب Automation</div><div class="ic-desc">Automation چیست؟ Business Automation، AI Workflow، نمونه‌های واقعی</div></div>
+      <div class="info-card"><div class="ic-title">💰 هاب Creator</div><div class="ic-desc">چگونه AI Agent بفروشیم؟ بهترین محصولات AI برای فروش، کسب درآمد از Workflow</div></div>
+    </div>
+
+    <h3><span class="h3-num">۲</span> نیت جستجو مبنای تولید است — Search Intent → CTA</h3>
+    <div class="card">
+      <p style="font-size:13.5px">مثال: «چگونه AI Agent بسازم؟» → نیت آموزشی → CTA: <b>شروع ساخت محصول</b><br>«AI Agent برای پشتیبانی» → نیت یافتن راه‌حل → CTA: <b>مشاهده‌ی راه‌حل‌های آماده</b><br>«فروش AI Agent» → نیت سازندگی → CTA: <b>فروش محصولت در مش</b></p>
+    </div>
+
+    <h3><span class="h3-num">۳</span> صفحات مقایسه — Comparison Pages</h3>
+    <p>قدرتمندترین سلاح B3 در لحظه‌ی تصمیم، به شرط صداقت و پرهیز از صفحات مصنوعیِ «مش vs Xِ بی‌محتوا».</p>
+    <div class="table-wrap"><table><tr><th></th><th>مش</th><th>ساخت شخصی</th></tr><tr><td>ساخت محصول</td><td>Productize آماده</td><td>از صفر</td></tr><tr><td>توزیع</td><td>Marketplace آماده</td><td>بازاریابی شخصی</td></tr><tr><td>مالکیت</td><td>۱۰۰٪ متعلق به سازنده</td><td>کامل</td></tr><tr><td>امنیت/بررسی</td><td>Review ساختاریافته</td><td>شخصی</td></tr><tr><td>کسب درآمد</td><td>پرداخت و مدیریت سفارش</td><td>زیرساخت شخصی</td></tr></table></div>
+    <p style="font-size:13px; color:#64748b">ساختار هر Comparison: Hero («کدام برای شما مناسب‌تر است؟») → جدول مقایسه → «برای چه کسی مناسب است؟» → CTA دوگانه (خریدار / سازنده).</p>
+
+    <h3><span class="h3-num">۴</span> صفحه‌ی کلیدی: Buy vs Build</h3>
+    <div class="card" style="border-right:4px solid #059669">
+      <div class="card-title">چرا این صفحه حیاتی است؟</div>
+      <p>هم خریدار را قانع می‌کند («بخرم یا بسازم؟») و هم سازنده را («آیا محصول آماده‌ی من ارزش خرید دارد؟»). محورهای مقایسه: زمان، هزینه، تخصص، نگهداری، ریسک، سفارشی‌سازی و سرعت تا نتیجه. انتهای صفحه دو مسیر: «من خریدارم → محصولات» و «من سازنده‌ام → فروش محصول».</p>
+    </div>
+
+    <h3><span class="h3-num">۵</span> لندینگ‌های Use-Case — موتور اصلی سئو و تبدیل</h3>
+    <p>به‌جای «مش چیست؟» بگوییم «با محصولات مش چه کاری می‌توانی بکنی؟»</p>
+    <div class="grid3">
+      <div class="info-card"><div class="ic-title">برای کسب‌وکار</div><div class="ic-desc">Customer Support · Sales · Marketing · HR · Operations · Finance · Research</div></div>
+      <div class="info-card"><div class="ic-title">ساختار هر Use-Case</div><div class="ic-desc">Hero + Problem + Solution + Examples + Products مرتبط + How it works + FAQ + CTA</div></div>
+      <div class="info-card"><div class="ic-title">نمونه</div><div class="ic-desc"><b>AI Agents for Customer Support</b> — «پشتیبانی را با ایجنت‌های آماده سریع‌تر کن» → مشاهده‌ی ایجنت‌های پشتیبانی</div></div>
+    </div>
+
+    <h3><span class="h3-num">۶</span> صفحات دسته و محصول — Category & Product SEO</h3>
+    <p>صفحه‌ی دسته فقط لیست کارت نیست؛ لندینگی کامل است: Hero («بهترین AI Agentهای پشتیبانی»)، توضیح ارزش، فیلترهای قدرتمند (قیمت، امتیاز، Verified، Delivery، Runtime، نوع محصول، Integration)، محصولات ویژه، راهنمای انتخاب و FAQ.</p>
+    <div class="highlight"><strong>صفحه‌ی محصولِ سئو-محور:</strong> عنوان غنی از نیت جستجو (مثلاً «Onboardflow — ایجنت هوشمند آنبوردینگ کارکنان») + Structured Data معتبر (فقط با داده‌ی واقعی).</div>
+
+    <h3><span class="h3-num">۷</span> معماری URL و Taxonomy</h3>
+    <div class="card" style="direction:ltr; text-align:left; font-family:ui-monospace, monospace; font-size:12.5px; line-height:1.8">
+      /<br>
+      ├── agents / automations / workflows / templates<br>
+      ├── use-cases / customer-support / sales / marketing / hr / operations<br>
+      ├── categories / customer-support / sales / ...<br>
+      ├── creators /  &nbsp;  creators/what-can-i-sell &nbsp; creators/how-it-works<br>
+      ├── resources /<br>
+      └── compare / build-vs-buy &nbsp; mash-vs-alternatives
+    </div>
+    <p style="font-size:12.5px; color:#64748b">هیچ URLی صرفاً برای پر کردن ساختار ساخته نمی‌شود؛ Taxonomy باید با داده‌ی واقعی محصول هماهنگ باشد.</p>
+
+    <h3><span class="h3-num">۸</span> لینک‌سازی داخلی — هیچ بن‌بستی نیست</h3>
+    <div class="funnel"><div class="funnel-step">مقاله</div><span class="funnel-arrow">←</span><div class="funnel-step">Use-Case</div><span class="funnel-arrow">←</span><div class="funnel-step">Category</div><span class="funnel-arrow">←</span><div class="funnel-step">Product</div><span class="funnel-arrow">←</span><div class="funnel-step" style="background:#059669; color:white">Creator CTA</div></div>
+    <p style="font-size:13px; color:#64748b">مثال: مقاله‌ی «خودکارسازی پشتیبانی» → Use-Case پشتیبانی → دسته‌ی Customer Support Agents → محصولات → دعوت به فروش محصول مشابه.</p>
+
+    <h3><span class="h3-num">۹</span> سئوی دو سویه و سئوی برنامه‌پذیر</h3>
+    <div class="grid2">
+      <div class="info-card"><div class="ic-title">Buyer SEO</div><div class="ic-desc">Search → Product → Purchase</div></div>
+      <div class="info-card"><div class="ic-title">Creator SEO</div><div class="ic-desc">Search → Education → Signup → Submission → First Sale</div></div>
+    </div>
+    <div class="warning"><strong>Programmatic SEO با احتیاط:</strong> صفحاتی مانند «AI Agents for [Industry]» فقط زمانی ساخته شوند که محتوای هر صفحه واقعاً متفاوت و ارزشمند باشد — نه ۱۰٬۰۰۰ صفحه‌ی شبیه‌هم.</div>
+
+    <h3><span class="h3-num">۱۰</span> اتصال محتوا به داده‌ی محصول — Flywheel</h3>
+    <div class="funnel" style="flex-direction:column; gap:6px; align-items:stretch; text-align:center">
+      <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap"><div class="funnel-step">سازندگان بیشتر</div><span class="funnel-arrow">→</span><div class="funnel-step">محصولات بیشتر</div><span class="funnel-arrow">→</span><div class="funnel-step">دسته‌های بهتر</div></div>
+      <span style="color:#94a3b8">↓</span>
+      <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap"><div class="funnel-step">صفحات سئو بیشتر</div><span class="funnel-arrow">→</span><div class="funnel-step">ترافیک ارگانیک</div><span class="funnel-arrow">→</span><div class="funnel-step">خریداران بیشتر</div></div>
+      <span style="color:#94a3b8">↓</span>
+      <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap"><div class="funnel-step">فروش بیشتر</div><span class="funnel-arrow">→</span><div class="funnel-step">داستان‌های بیشتر</div><span class="funnel-arrow">→</span><div class="funnel-step" style="background:#059669; color:white">سازندگان بیشتر</div></div>
+    </div>
+
+    <h3><span class="h3-num">۱۱</span> سنجش و CTA هوشمند</h3>
+    <div class="table-wrap"><table><tr><th>شاخص هر صفحه</th><th>چرا مهم است</th></tr><tr><td>Organic Sessions / Queries / CTR</td><td>سلامت سئو</td></tr><tr><td>Signup / Creator Signup / Product View</td><td>تبدیل اولیه</td></tr><tr><td>Activation / Submission / First Sale</td><td>اثر واقعی بر درآمد</td></tr></table></div>
+    <p style="font-size:13px; color:#64748b">CTA هوشمند متناسب با نیت: Buyer Intent → «مشاهده محصولات» · Creator Intent → «فروش محصولت» · Learning Intent → «یادگیری بیشتر». مقاله‌ی ۲۰هزار بازدیدی بدون Signup، موفق محسوب نمی‌شود.</p>
+    <div class="success"><strong>تعریف موفقیت B3:</strong> وقتی بتوانیم دو مسیر را عددی ردیابی کنیم: Google → Content → Marketplace → Purchase (خریدار) و Google → Creator Content → Signup → Submission → First Sale (سازنده). B3 باید موتور جذب ارگانیکِ قابل اندازه‌گیری برای هر دو سوی Marketplace باشد.</div>
+
+    <div class="divider"></div>
+
+    <!-- ================= B4 ================= -->
+    <h2 id="b4" class="section-title"><span class="phase-badge b4">فاز B4</span> موتور لید و تبدیل — Lead & Conversion Engine</h2>
+    <p class="phase-desc">اگر B3 می‌گوید «سازنده را پیدا کن»، B4 می‌گوید «او را از دست نده و تا شروع واقعی همراهش بمان.» B4 چهار ستون به‌هم‌پیوسته دارد که یک نظام واحد می‌سازند: Traffic → Identify → Capture → Nurture → Return → Convert → Activate.</p>
+
+    <div class="grid2">
+      <div class="card" style="border-right:4px solid #dc2626"><div class="card-title">چهار ستون B4</div><ol style="margin-top:8px"><li><b>Lead Capture</b> — شکار هوشمند لید</li><li><b>Creator Newsletter</b> — پرورش رابطه</li><li><b>Retargeting</b> — بازگردانی مبتنی بر چرخه‌ی عمر</li><li><b>Conversion Optimization</b> — بهینه‌سازی مداوم تبدیل</li></ol></div>
+      <div class="card" style="background:#fef2f2; border-color:#fecaca"><div class="card-title">تمایز کلیدی</div><p style="font-size:13px">B4 «سیستم ایمیل مارکتینگ» نیست؛ <b>نظام تبدیل ترافیک به سازنده‌ی موفق و درآمدزا</b> است. هر مرحله باید قابل اندازه‌گیری باشد.</p></div>
+    </div>
+
+    <h3><span class="h3-num">۴.۱</span> شکار لید — Lead Capture (زمینه‌محور)</h3>
+    <p>هدف، جمع‌آوری کورِ ایمیل نیست؛ داشتن دلیلی واقعی برای ارتباط دوباره، پیش از ترک سایت.</p>
+    <h4>بخش‌بندی لید — همه را در یک لیست نریزیم:</h4>
+    <div class="table-wrap"><table><tr><th>سطح</th><th>رفتار</th><th>اقدام بعدی</th></tr><tr><td><span class="tag">Visitor</span></td><td>فقط بازدید</td><td>Lead Magnet مرتبط</td></tr><tr><td><span class="tag tag-amber">Interested</span></td><td>Landing/Economics/Stories دیده</td><td>دعوت به اشتراک هدفمند</td></tr><tr><td><span class="tag tag-blue">Lead</span></td><td>ایمیل داده، ثبت‌نام نکرده</td><td>Nurture → Signup</td></tr><tr><td><span class="tag tag-green">Registered</span></td><td>ثبت‌نام کرده، فعال نشده</td><td>Onboarding</td></tr><tr><td><span class="tag" style="background:#dc2626; color:white; border-color:#dc2626">Activated</span></td><td>وارد ساخت محصول شده</td><td>Submission → Launch</td></tr></table></div>
+
+    <h4>Lead Magnet باید با نیت صفحه هماهنگ باشد:</h4>
+    <div class="grid2">
+      <div class="info-card"><div class="ic-title">در لندینگ سازندگان</div><div class="ic-desc">«ایده داری ولی نمی‌دانی چه بفروشی؟ راهنمای رایگان ایده‌های محصول AI را دریافت کن.»</div></div>
+      <div class="info-card"><div class="ic-title">در صفحه‌ی اقتصاد</div><div class="ic-desc">«می‌خواهی ببینی محصولت چقدر می‌تواند بسازد؟» → ماشین‌حساب → «حالا محصولت را بفروش»</div></div>
+      <div class="info-card"><div class="ic-title">در داستان‌ها</div><div class="ic-desc">«می‌خواهی مسیر این سازنده را امتحان کنی؟ شروع ساخت محصول»</div></div>
+      <div class="info-card"><div class="ic-title">Exit Intent</div><div class="ic-desc">به‌جای «صبر کن!» → «هنوز آماده نیستی؟ راهنمای شروع فروش محصولات AI را بگیر.»</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">۵ لیدمگنت پیشنهادی برای شروع (کیفیت بر کمیت)</div>
+      <ul><li><b>Creator Starter Guide</b> — راهنمای شروع فروش محصولات AI</li><li><b>۵۰ ایده‌ی محصول AI قابل فروش</b></li><li><b>چک‌لیست Product Readiness</b></li><li><b>ماشین‌حساب درآمد سازنده</b></li><li><b>چک‌لیست Launch تا اولین فروش</b></li></ul>
+      <p style="font-size:12.5px; color:#64748b; margin-top:8px"><b>فرم:</b> در گام اول فقط <b>Email</b>. سپس Progressive Profiling (نوع سازنده، حوزه، سطح تجربه) — نه همه‌چیز در فرم اول.</p>
+    </div>
+
+    <h3><span class="h3-num">۴.۲</span> خبرنامه‌ی سازندگان — Creator Newsletter (رشد-محور، نه خبری)</h3>
+    <p>خبرنامه نباید «۵ مقاله‌ی این هفته» باشد؛ باید <b>Creator Growth Newsletter</b> باشد.</p>
+    <div class="grid2">
+      <div class="info-card"><div class="ic-title">محتوای ارزشمند</div><div class="ic-desc">ایده‌های محصول هفته · داستان یک سازنده · فرصت‌های بازار (دسته‌های کم‌محصول) · نکته‌ی صفحه‌ی محصول و قیمت‌گذاری · ترفند رسیدن به اولین مشتری</div></div>
+      <div class="info-card"><div class="ic-title">چرخه‌ی عمر (Lifecycle)</div><div class="ic-desc"><b>Pre-signup</b> → هدف: Signup<br><b>New Creator</b> → Activation<br><b>Builder</b> → Submission<br><b>Submitted</b> → Launch<br><b>Selling</b> → فروش دوم / محصول دوم</div></div>
+    </div>
+
+    <h3><span class="h3-num">۴.۳</span> بازگردانی — Retargeting مبتنی بر رفتارِ رها شده</h3>
+    <div class="table-wrap"><table><tr><th>سناریو</th><th>رفتار</th><th>پیام بازگردانی</th></tr><tr><td>۱</td><td>Landing دیده، Signup نکرده</td><td>«هنوز مطمئن نیستی؟» → Stories / Economics / FAQ</td></tr><tr><td>۲</td><td>Signup کرده، ساخت را شروع نکرده</td><td>«هنوز شروع نکردی؟» → Getting Started</td></tr><tr><td>۳</td><td>Wizard را نیمه‌کاره رها کرده</td><td>«محصولت تقریباً آماده است» → ادامه‌ی Wizard</td></tr><tr><td>۴</td><td>ساخته ولی Submit نکرده</td><td>«آماده‌ی بررسی است» → ادامه‌ی ارسال</td></tr><tr><td>۵</td><td>منتشر شده ولی فروش ندارد</td><td>«حالا وقت اولین مشتری است» → Launch Toolkit</td></tr></table></div>
+    <div class="grid2">
+      <div class="info-card"><div class="ic-title">کانال‌ها (مرحله‌ای)</div><div class="ic-desc"><b>گام ۱:</b> Email (مهم‌ترین)<br><b>گام ۲:</b> Paid Retargeting (Meta/Google)<br><b>گام ۳:</b> In-app & Push — نه همه از روز اول</div></div>
+      <div class="warning" style="margin:0"><strong>کنترل فرکانس:</strong> اگر کاربر Signup کرد، تبلیغ «ثبت‌نام کن» باید فوراً متوقف شود. سیستم باید بداند چند بار، آخرین بار کی، و آیا به مرحله‌ی بعد رفته است یا نه.</div>
+    </div>
+
+    <h3><span class="h3-num">۴.۴</span> بهینه‌سازی تبدیل — Conversion Optimization (نظام دائمی)</h3>
+    <h4>قیف کامل B4 — هر مرحله یک نرخ تبدیل:</h4>
+    <div class="funnel" style="font-size:11.5px">
+      <div class="funnel-step">Visitor</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Creator Page</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Lead</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Signup</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Onboarding</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Product Started</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Submitted</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step">Published</div><span class="funnel-arrow">←</span>
+      <div class="funnel-step" style="background:#dc2626; color:white">First Sale</div>
+    </div>
+    <div class="highlight"><strong>نکته‌ی تحلیلی:</strong> اگر ۱۰۰۰ نفر وارد شوند و فقط ۲ نفر محصول بسازند، مشکل لزوماً «مارکتینگ» نیست؛ ممکن است UX، Onboarding، Trust یا پیچیدگی محصول باشد. B4 باید داده‌ی مارکتینگ و محصول را به هم وصل کند.</div>
+
+    <h4>A/B Testing — بدون وسواس زودهنگام:</h4>
+    <div class="grid3">
+      <div class="info-card"><div class="ic-title">Hero</div><div class="ic-desc">«محصولت را بفروش» در برابر «از ساخته‌ات درآمد بساز»</div></div>
+      <div class="info-card"><div class="ic-title">CTA</div><div class="ic-desc">شروع ساخت · فروش محصول · تبدیل ایده به محصول</div></div>
+      <div class="info-card"><div class="ic-title">اثبات اجتماعی</div><div class="ic-desc">با Story در برابر بدون Story</div></div>
+    </div>
+    <p style="font-size:12.5px; color:#64748b; margin-top:8px">تا ترافیک کافی نداریم، اول گلوگاه‌های بزرگ قیف را حل می‌کنیم، بعد تست‌های ظریف.</p>
+
+    <h4>شخصی‌سازی و امتیازدهی:</h4>
+    <div class="grid2">
+      <div class="info-card"><div class="ic-title">Personalization</div><div class="ic-desc">اگر کاربر Creator است، همان صفحه‌ای را نبیند که Buyer می‌بیند. تفکیک مسیر از ابتدا: «دنبال خریدی یا فروش؟»</div></div>
+      <div class="info-card"><div class="ic-title">Lead Scoring (مقیاس بالاتر)</div><div class="ic-desc">Landing +1 · Economics +2 · Resource +3 · Signup +5 · Wizard Start +10 · Completed +15 · Submission +20</div></div>
+    </div>
+
+    <div class="card" style="background:#fff7ed; border-color:#fed7aa">
+      <div class="card-title">اتصال به CRM — لید فقط یک ایمیل نیست</div>
+      <p style="font-size:13px"><b>هر لید:</b> Source → Campaign → Intent → Lifecycle Stage → Last Activity → Next Action. این ساختار برای تیم Creator Success در مقیاس، حیاتی است.</p>
+    </div>
+
+    <h3><span class="h3-num">۴.۵</span> چرخه‌ی نهایی و داشبورد B4</h3>
+    <div class="funnel" style="flex-direction:column; gap:6px">
+      <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center"><div class="funnel-step">SEO</div><span class="funnel-arrow">→</span><div class="funnel-step">Landing</div><span class="funnel-arrow">→</span><div class="funnel-step">Lead Capture</div></div>
+      <span style="color:#94a3b8">↓</span>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center"><div class="funnel-step">Newsletter/Nurture</div><span class="funnel-arrow">→</span><div class="funnel-step">Signup</div><span class="funnel-arrow">→</span><div class="funnel-step">Onboarding</div></div>
+      <span style="color:#94a3b8">↓</span>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center"><div class="funnel-step">Product Creation</div><span class="funnel-arrow">→</span><div class="funnel-step">Launch</div><span class="funnel-arrow">→</span><div class="funnel-step" style="background:#dc2626; color:white">First Sale → Story → SEO</div></div>
+    </div>
+
+    <div class="table-wrap"><table><tr><th>لایه</th><th>شاخص‌ها</th></tr><tr><td><b>Acquisition</b></td><td>Organic / Paid / Creator Visitors و Source</td></tr><tr><td><b>Lead</b></td><td>Lead Capture Rate · Cost per Lead · Lead → Signup</td></tr><tr><td><b>Activation</b></td><td>Signup → Onboarding → Product → Submission</td></tr><tr><td><b>Revenue</b></td><td>Approval → Published → First Sale</td></tr><tr><td><b>Retention</b></td><td>بازگشت سازنده · محصول دوم · تعامل خبرنامه</td></tr></table></div>
+    <div class="warning"><strong>مهم‌ترین KPI واقعی B4:</strong> تعداد ایمیلِ جمع‌آوری‌شده <b>شاخص موفقیت نیست</b>. ممکن است ۱۰٬۰۰۰ ایمیل داشته باشیم و هیچ سازنده‌ی فعالی نسازیم. شاخص نهایی: <b>Qualified Creator → First Product → First Sale</b> — چند نفر از جذب‌شده‌ها واقعاً به سازنده‌ی فعال و درآمدزا تبدیل شدند؟</div>
+
+    <div class="card" style="background:#f8fafc; border-color:#e2e8f0">
+      <div class="card-title">معماری نهایی B4</div>
+      <p style="font-family:ui-monospace, monospace; direction:ltr; text-align:left; font-size:12.5px; line-height:1.8">
+        B4 — Lead & Conversion Engine<br>
+        ├── Lead Capture (Contextual Magnets · Forms · Progressive Profiling · Segmentation)<br>
+        ├── Creator Newsletter (Ideas · Education · Stories · Opportunities · Lifecycle)<br>
+        ├── Retargeting (Visitor · Lead · Signup · Abandoned · Submitted · Published/No Sale)<br>
+        ├── Conversion Optimization (Funnel Analytics · A/B · Personalization · Exit Intent · UX)<br>
+        └── Measurement (Attribution · Lead Scoring · CRM · Revenue Funnel)
+      </p>
+    </div>
+    <div class="success"><strong>تعریف موفقیت B4:</strong> مش بتواند به‌صورت سیستماتیک این مسیر را اجرا کند: ورود از Google/هر کانال → درک Intent → تبدیل به Lead در صورت عدم آمادگی → پرورش با محتوای متناسب → بازگشت → Signup → فعال‌سازی → ساخت و ارسال محصول → انتشار → اولین فروش — و هیچ مرحله‌ای بدون اندازه‌گیری رها نشود.</div>
+
+    <div class="divider"></div>
+
+    <!-- ================= ARCH ================= -->
+    <h2 id="arch" class="section-title">◆ معماری یکپارچه، شاخص‌ها و نقشه‌ی اجرا</h2>
+
+    <div class="card" style="border-right:4px solid #0f172a">
+      <div class="card-title">تصویر کلان: B1 تا B4 چگونه به هم قفل می‌شوند؟</div>
+      <div class="funnel">
+        <div class="funnel-step" style="background:#0e7490; color:white">B1<br><small>جذب</small></div><span class="funnel-arrow">→</span>
+        <div class="funnel-step" style="background:#7c3aed; color:white">B2<br><small>اعتماد</small></div><span class="funnel-arrow">→</span>
+        <div class="funnel-step" style="background:#059669; color:white">B3<br><small>ارگانیک</small></div><span class="funnel-arrow">→</span>
+        <div class="funnel-step" style="background:#dc2626; color:white">B4<br><small>تبدیل</small></div><span class="funnel-arrow">→</span>
+        <div class="funnel-step" style="background:#0f172a; color:white">A1→A5<br><small>ساخت تا رشد</small></div>
+      </div>
+      <p style="font-size:13px; color:#334155; margin-top:12px"><b>B1</b> دروازه است · <b>B2</b> تردید را حل می‌کند · <b>B3</b> ترافیک پایدار می‌آورد · <b>B4</b> ترافیک را به سازنده‌ی فعال تبدیل می‌کند · <b>A1–A5</b> داخل محصول، او را تا فروش و رشد همراهی می‌کند. زبان، اصطلاحات و وضعیت‌ها در همه‌ی این لایه‌ها یکسان است.</p>
+    </div>
+
+    <h3>نقشه‌ی راه پیشنهادی اجرا (فریز عملیاتی)</h3>
+    <div class="table-wrap"><table><tr><th>گام</th><th>تمرکز</th><th>خروجی قابل تحویل</th><th>پیش‌نیاز</th></tr><tr><td><span class="tag" style="background:#0e7490; color:white; border-color:#0e7490">گام ۱</span></td><td><b>B1 — شالوده</b></td><td>لندینگ <span class="url">/creators</span> + دو صفحه‌ی /what-can-i-sell و /how-it-works + Funnel Events</td><td>تأیید کپی Hero و ۷ نوع محصول</td></tr><tr><td><span class="tag" style="background:#7c3aed; color:white; border-color:#7c3aed">گام ۲</span></td><td><b>B2 — اعتماد</b></td><td>۳–۵ Story واقعی + Resource Hub اولیه (۸–۱۰ منبع) + FAQ + ماشین‌حساب درآمد</td><td>تأیید مدل اقتصادی (یا برچسب به‌زودی)</td></tr><tr><td><span class="tag" style="background:#059669; color:white; border-color:#059669">گام ۳</span></td><td><b>B3 — ارگانیک</b></td><td>۱۰ Use-Case + ۶ Category Page + ۱۲ مقاله‌ی Problem/Solution + Build vs Buy</td><td>Taxonomy و URL نهایی</td></tr><tr><td><span class="tag" style="background:#dc2626; color:white; border-color:#dc2626">گام ۴</span></td><td><b>B4 — تبدیل</b></td><td>۳ Lead Magnet + Newsletter Lifecycle + Retargeting Email + داشبورد Funnel</td><td>CRM/Mail + Analytics</td></tr></table></div>
+
+    <h3>داشبورد یکپارچه‌ی موفقیت (از بازدید تا درآمد)</h3>
+    <div class="table-wrap"><table><tr><th>مرحله</th><th>شاخص اصلی</th><th>هشدار</th></tr><tr><td>جذب</td><td>Creator Landing Views · Organic Sessions · Source</td><td>رشد بازدید بدون رشد CTA = پیام نامفهوم</td></tr><tr><td>علاقه</td><td>CTA Click · WhatCanISell Views · Economics Views</td><td>کلیک بالا، Signup پایین = اصطکاک اعتماد</td></tr><tr><td>تبدیل</td><td>Signup · Onboarding Completed</td><td>Signup بالا، Onboarding پایین = UX onboarding</td></tr><tr><td>فعال‌سازی</td><td>First Product Started · Completed · Submitted</td><td>شروع بالا، Submit پایین = پیچیدگی Wizard</td></tr><tr><td>انتشار و فروش</td><td>Approved · Published · First Sale · Second Product</td><td>انتشار بدون فروش = مشکل کشف/قیمت/صفحه محصول</td></tr></table></div>
+
+    <div class="card" style="background:linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); color:white; border:none">
+      <div style="font-size:13px; opacity:0.8; margin-bottom:8px">سخن پایانی — تعریف «تمام‌شده»</div>
+      <div style="font-size:17px; font-weight:800; line-height:1.6">Inbound مش زمانی تمام‌شده است که یک غریبه بتواند بدون تماس با تیم، از گوگل وارد شود، بفهمد چه چیزی می‌تواند بسازد و بفروشد، اعتماد کند، ثبت‌نام کند، محصولش را بسازد و اولین فروشش را تجربه کند — و این مسیر برای هر دو سوی Marketplace، هر روز قابل اندازه‌گیری و بهبود باشد.</div>
+      <div style="font-size:12.5px; opacity:0.7; margin-top:12px">این سند، مبنای فریز نهایی B1–B4 و اتصال مستقیم آن به A1–A5 است. هر تغییری در کپی، URL یا شاخص‌ها باید به‌صورت نسخه‌گذاری‌شده به این سند بازگردد.</div>
+    </div>
+
+    <div style="margin-top:28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#94a3b8; border-top:1px solid #f1f5f9; padding-top:16px">
+      <span>تهیه شده برای <b style="color:#334155">مش (MESH) — AgentHub</b> · واحد رشد و محصول</span>
+      <span>نسخه‌ی ۱.۰ نهایی · شهریور ۱۴۰۴</span>
+    </div>
+
+  </div>
+</div>
+
+<div style="max-width:980px; margin:16px auto 40px; text-align:center; font-size:12px; color:#94a3b8; font-family:'Vazirmatn', Tahoma, sans-serif">
+  برای چاپ: Ctrl/Cmd + P → ذخیره به‌صورت PDF &nbsp;·&nbsp; این سند به‌صورت واکنش‌گرا (Responsive) و راست‌به‌چپ طراحی شده است.
+</div>
+
+</body>
+</html>
