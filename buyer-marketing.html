@@ -1,0 +1,2517 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ماشین درآمد خریدار MESH — نقشه کامل Buyer Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1e1b4b;
+    --ink-soft:#334155;
+    --accent:#7c3aed;
+    --accent2:#c026d3;
+    --indigo:#4f46e5;
+    --quote-bg:#f5f3ff;
+    --quote-border:#8b5cf6;
+    --quote-ink:#4c1d95;
+    --card:#ffffff;
+    --line:#e2e8f0;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:'Vazirmatn',Tahoma,Arial,sans-serif;
+    color:var(--ink-soft);
+    background:
+      radial-gradient(1200px 500px at 90% -5%, rgba(192,38,211,.10), transparent 60%),
+      radial-gradient(1000px 500px at 5% 10%, rgba(79,70,229,.10), transparent 60%),
+      linear-gradient(180deg,#eef2ff 0%,#f8fafc 45%,#fdf4ff 100%);
+    background-attachment:fixed;
+    line-height:2;
+  }
+  .page{
+    max-width:1000px;
+    margin:48px auto;
+    background:var(--card);
+    border-radius:28px;
+    box-shadow:0 24px 70px rgba(79,70,229,.14), 0 4px 14px rgba(30,27,75,.06);
+    overflow:hidden;
+  }
+  /* ---------- Hero ---------- */
+  header.hero{
+    background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 55%,#c026d3 100%);
+    color:#fff;
+    padding:56px 52px 48px;
+    position:relative;
+  }
+  header.hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(600px 200px at 85% 0%, rgba(255,255,255,.18), transparent 60%);
+    pointer-events:none;
+  }
+  .hero .kicker{
+    display:inline-block;
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:999px;
+    padding:4px 16px;
+    font-size:.82rem;
+    font-weight:600;
+    letter-spacing:.02em;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    margin:0 0 12px;
+    font-size:2.05rem;
+    font-weight:900;
+    line-height:1.5;
+  }
+  .hero p.sub{
+    margin:0;
+    font-size:1.02rem;
+    font-weight:400;
+    opacity:.94;
+    max-width:46rem;
+  }
+  .hero .tags{margin-top:22px; display:flex; flex-wrap:wrap; gap:8px}
+  .hero .tags span{
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.28);
+    border-radius:999px;
+    padding:3px 14px;
+    font-size:.8rem;
+    font-weight:600;
+  }
+  /* ---------- Main ---------- */
+  main{padding:44px 52px 56px}
+  /* TOC */
+  nav.toc{
+    background:#f8fafc;
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:26px 30px;
+    margin-bottom:14px;
+  }
+  nav.toc h2{
+    column-span:all;
+    margin:0 0 14px;
+    font-size:1.15rem;
+    font-weight:900;
+    color:var(--ink);
+    display:flex; align-items:center; gap:10px;
+  }
+  nav.toc .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+  nav.toc .cols{columns:3; column-gap:30px}
+  nav.toc a{
+    display:block;
+    color:var(--indigo);
+    text-decoration:none;
+    font-size:.88rem;
+    font-weight:500;
+    padding:2px 0;
+    break-inside:avoid;
+  }
+  nav.toc a:hover{color:var(--accent2); text-decoration:underline}
+  nav.toc a.lvl2{padding-right:14px; color:#6d28d9; font-size:.83rem}
+  nav.toc a.lvl3{padding-right:28px; color:#7c7fa8; font-size:.8rem}
+  @media (max-width:820px){ nav.toc .cols{columns:2} }
+  @media (max-width:560px){ nav.toc .cols{columns:1} }
+  /* Headings */
+  h2.sec{
+    font-size:1.42rem;
+    font-weight:900;
+    color:var(--ink);
+    margin:2.8rem 0 1.1rem;
+    line-height:1.7;
+    position:relative;
+    padding-right:22px;
+  }
+  h2.sec::before{
+    content:"";
+    position:absolute;
+    right:0; top:.42em;
+    width:9px; height:calc(100% - .84em);
+    min-height:22px;
+    border-radius:8px;
+    background:linear-gradient(180deg,var(--accent),var(--accent2));
+  }
+  h3{
+    font-size:1.1rem;
+    font-weight:800;
+    color:#4338ca;
+    margin:1.7rem 0 .45rem;
+  }
+  h3.q{color:#6d28d9; margin:.9rem 0 .1rem; font-size:1.02rem}
+  h3.emph{font-size:1.18rem; color:var(--accent2)}
+  /* Text */
+  p{margin:.7rem 0}
+  strong,b{color:#312e81; font-weight:800}
+  .lead{font-size:1.04rem; color:#1e293b}
+  /* Blockquote */
+  blockquote{
+    background:var(--quote-bg);
+    border-right:5px solid var(--quote-border);
+    border-radius:14px;
+    padding:14px 20px;
+    margin:1rem 0;
+    color:var(--quote-ink);
+    font-weight:600;
+  }
+  blockquote p{margin:.2rem 0}
+  /* Lists */
+  ul,ol{margin:.55rem 0; padding-right:1.6rem}
+  li{margin:.32rem 0}
+  li::marker{color:var(--accent); font-weight:700}
+  /* Tables */
+  table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    margin:1.1rem 0;
+    font-size:.93rem;
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  th{
+    background:#eef2ff;
+    color:#312e81;
+    font-weight:800;
+    text-align:right;
+  }
+  th,td{padding:10px 14px; border-bottom:1px solid var(--line)}
+  tr:last-child td{border-bottom:none}
+  tbody tr:nth-child(even) td{background:#fafbff}
+  td.c,th.c{text-align:center}
+  td.dots{color:var(--accent); font-weight:800; letter-spacing:.1em; text-align:center; white-space:nowrap}
+  /* Flow (vertical chains) */
+  .flow{
+    display:flex; flex-direction:column; align-items:center; gap:7px;
+    background:#f8fafc;
+    border:1.5px dashed #c7d2fe;
+    border-radius:16px;
+    padding:20px 16px;
+    margin:1.1rem auto;
+    max-width:560px;
+  }
+  .flow .step{
+    font-weight:800;
+    color:#312e81;
+    background:linear-gradient(180deg,#eef2ff,#e0e7ff);
+    border:1px solid #c7d2fe;
+    padding:6px 20px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+  .flow .arr{color:#a78bfa; font-weight:900; line-height:1}
+  /* Code blocks (ASCII diagrams) */
+  pre{
+    direction:ltr; text-align:left;
+    background:#151638;
+    color:#c7d2fe;
+    border-radius:16px;
+    padding:22px 26px;
+    overflow-x:auto;
+    margin:1.1rem 0;
+    font-family:'Vazirmatn',Consolas,'Courier New',monospace;
+    font-size:.9rem;
+    line-height:1.65;
+    box-shadow:inset 0 0 0 1px rgba(199,210,254,.15);
+  }
+  /* Divider */
+  hr{
+    border:none; height:2px; margin:2.6rem 0;
+    background:linear-gradient(90deg,transparent,#c4b5fd 30%,#f0abfc 70%,transparent);
+    border-radius:2px;
+  }
+  .orn{
+    text-align:center; color:#a78bfa; font-size:1.3rem;
+    letter-spacing:.6em; margin:3rem 0 1rem; user-select:none;
+  }
+  /* Footer */
+  footer{
+    background:#f8fafc;
+    border-top:1px solid var(--line);
+    padding:20px 52px;
+    font-size:.82rem;
+    color:#64748b;
+    text-align:center;
+  }
+  @media (max-width:640px){
+    main{padding:30px 22px 40px}
+    header.hero{padding:40px 26px}
+    footer{padding:16px 22px}
+    .page{margin:14px; border-radius:20px}
+  }
+  ::selection{background:#ddd6fe; color:#3b0764}
+</style>
+</head>
+<body id="top">
+<div class="page">
+
+<header class="hero">
+  <span class="kicker">MESH · Buyer Marketing</span>
+  <h1>ماشین درآمد خریدار MESH</h1>
+  <p class="sub">نقشه کامل و مرحله‌به‌مرحله‌ی «ماشین درآمد خریدار» — از آگاهی و کشف مسئله تا اعتماد، خرید، فعال‌سازی، موفقیت، تکرار خرید و رشد چرخه‌ای مارکت‌پلیس؛ به‌همراه نقشه سه اسپرینت و ۲۷ اپیک اجرایی.</p>
+  <div class="tags">
+    <span>Buyer Funnel</span><span>Growth Loops</span><span>Sprint 1-2-3</span><span>Epic B1 تا B27</span><span>KPI</span>
+  </div>
+</header>
+
+<main>
+
+<nav class="toc" aria-label="فهرست مطالب">
+  <h2><span class="dot"></span>فهرست مطالب</h2>
+  <div class="cols">
+    <a href="#sec-intro">مقدمه: قیف خریدار</a>
+    <a href="#sec-map">نقشه کلان Marketing خریداران MESH</a>
+    <a href="#sec-1">۱. Awareness</a>
+    <a href="#sec-2">۲. کانال‌های Awareness</a>
+    <a href="#sec-3">۳. Problem Discovery</a>
+    <a href="#sec-4">۴. Discovery Engine</a>
+    <a href="#sec-5">۵. Product Discovery</a>
+    <a href="#sec-6">۶. Trust Layer</a>
+    <a href="#sec-7">۷. Evaluation</a>
+    <a href="#sec-8">۸. Conversion — خرید</a>
+    <a href="#sec-9">۹. Checkout</a>
+    <a href="#sec-10">۱۰. Activation</a>
+    <a href="#sec-11">۱۱. Buyer Onboarding</a>
+    <a href="#sec-12">۱۲. Activation Assistance</a>
+    <a href="#sec-13">۱۳. Success</a>
+    <a href="#sec-14">۱۴. Review Acquisition</a>
+    <a href="#sec-15">۱۵. Retention</a>
+    <a href="#sec-16">۱۶. Personalization</a>
+    <a href="#sec-17">۱۷. Buyer Lifecycle</a>
+    <a href="#sec-18">۱۸. Buyer CRM</a>
+    <a href="#sec-19">۱۹. Retention Automation</a>
+    <a href="#sec-20">۲۰. Win-back</a>
+    <a href="#sec-21">۲۱. Buyer Referral</a>
+    <a href="#sec-22">۲۲. Buyer → Creator</a>
+    <a href="#sec-23">۲۳. کل ماشین درآمد خریدار</a>
+    <a href="#sec-24">۲۴. کانال‌های جذب خریدار</a>
+    <a href="#sec-25">۲۵. مهم‌ترین دارایی MESH: Creatorها</a>
+    <a href="#sec-26">۲۶. Marketplace Flywheel</a>
+    <a href="#sec-27">۲۷. KPIهای اصلی</a>
+    <a href="#sec-28">۲۸. چیزی که باید اندازه بگیریم</a>
+    <a href="#sec-29">۲۹. اولویت اجرای ماشین</a>
+    <a href="#sec-30">۳۰. تفاوت با قیف Creator</a>
+    <a href="#sec-final">و نهایتاً ماشین درآمد MESH</a>
+    <a href="#sec-growth">نقشه نهایی Buyer Growth</a>
+    <a href="#sec-s1">🟦 SPRINT 1 — Acquisition &amp; Discovery</a>
+    <a class="lvl2" href="#sec-b1">Epic B1 — Positioning &amp; Education</a>
+    <a class="lvl2" href="#sec-b2">Epic B2 — Use-Case Landing Pages</a>
+    <a class="lvl2" href="#sec-b3">Epic B3 — SEO Engine</a>
+    <a class="lvl2" href="#sec-b4">Epic B4 — Marketplace Discovery</a>
+    <a class="lvl2" href="#sec-b5">Epic B5 — Buyer Lead Capture</a>
+    <a class="lvl2" href="#sec-b6">Epic B6 — Trust Infrastructure</a>
+    <a class="lvl2" href="#sec-b7">Epic B7 — External Acquisition</a>
+    <a class="lvl2" href="#sec-s1out">خروجی Sprint 1</a>
+    <a href="#sec-s2">🟨 SPRINT 2 — Activation &amp; Conversion</a>
+    <a class="lvl2" href="#sec-b8">Epic B8 — Buyer Onboarding</a>
+    <a class="lvl2" href="#sec-b9">Epic B9 — Personalized Marketplace</a>
+    <a class="lvl2" href="#sec-b10">Epic B10 — Product Page Conversion</a>
+    <a class="lvl2" href="#sec-b11">Epic B11 — Purchase UX</a>
+    <a class="lvl2" href="#sec-b12">Epic B12 — Post-Purchase Onboarding</a>
+    <a class="lvl2" href="#sec-b13">Epic B13 — First Value</a>
+    <a class="lvl2" href="#sec-b14">Epic B14 — Conversion Optimization</a>
+    <a class="lvl2" href="#sec-b15">Epic B15 — Buyer CRM</a>
+    <a class="lvl2" href="#sec-b16">Epic B16 — Lifecycle Email</a>
+    <a class="lvl2" href="#sec-s2out">خروجی Sprint 2</a>
+    <a href="#sec-s3">🟩 SPRINT 3 — Retention &amp; Scale</a>
+    <a class="lvl2" href="#sec-b17">Epic B17 — Buyer Dashboard 2.0</a>
+    <a class="lvl2" href="#sec-b18">Epic B18 — Product Lifecycle</a>
+    <a class="lvl2" href="#sec-b19">Epic B19 — Review Engine</a>
+    <a class="lvl2" href="#sec-b20">Epic B20 — Re-Purchase Engine</a>
+    <a class="lvl2" href="#sec-b21">Epic B21 — Bundles</a>
+    <a class="lvl2" href="#sec-b22">Epic B22 — Cross-sell / Upsell</a>
+    <a class="lvl2" href="#sec-b23">Epic B23 — Referral</a>
+    <a class="lvl2" href="#sec-b24">Epic B24 — Buyer Community</a>
+    <a class="lvl2" href="#sec-b25">Epic B25 — Buyer Advocacy</a>
+    <a class="lvl2" href="#sec-b26">Epic B26 — Buyer Analytics</a>
+    <a class="lvl2" href="#sec-b27">Epic B27 — Growth Loop</a>
+    <a href="#sec-map3">نقشه کل سه Sprint</a>
+    <a href="#sec-order">ترتیب اجرای واقعی</a>
+    <a href="#sec-kpi">KPI اصلی هر Sprint</a>
+    <a href="#sec-principle">یک اصل بسیار مهم برای مش</a>
+  </div>
+</nav>
+
+<!-- ================= مقدمه ================= -->
+<p class="lead">دقیقاً. این بار بهتر است <strong>اصلاً از وضعیت فعلی MESH شروع نکنیم</strong>؛ اول یک مدل ایده‌آل برای «ماشین درآمد خریدار» طراحی کنیم، بعد در مرحله بعد آن را با محصول فعلی تطبیق می‌دهیم و Gapها را درمی‌آوریم.</p>
+
+<p>برای MESH، قیف خریدار نباید صرفاً این باشد:</p>
+
+<p><strong>ورود → جستجوی Agent → خرید</strong></p>
+
+<p>چون در محصولی مثل MESH مسئله اصلی خریدار قبل از خرید این است:</p>
+
+<blockquote><p>«من دقیقاً چه مشکلی دارم، آیا این محصول واقعاً آن را حل می‌کند، دقیقاً چه چیزی می‌خرم، آیا به درد زیرساخت من می‌خورد، چقدر ریسک دارد و اگر خریدم چطور به نتیجه می‌رسم؟»</p></blockquote>
+
+<p>بنابراین قیف باید حول <strong>Problem → Discovery → Trust → Fit → Purchase → Activation → Success → Repeat</strong> ساخته شود.</p>
+
+<!-- ================= نقشه کلان ================= -->
+<h2 class="sec" id="sec-map">نقشه کلان Marketing خریداران MESH</h2>
+
+<p>من این ماشین را در <strong>۷ مرحله اصلی</strong> می‌بینم:</p>
+
+<table>
+  <thead>
+    <tr><th>مرحله</th><th>سؤال ذهنی خریدار</th><th>هدف MESH</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1. Awareness</td><td>«این چیست؟»</td><td>آشنا شدن</td></tr>
+    <tr><td>2. Problem Discovery</td><td>«آیا این برای مشکل من است؟»</td><td>ایجاد Intent</td></tr>
+    <tr><td>3. Product Discovery</td><td>«چه چیزی می‌تواند کمکم کند؟»</td><td>پیدا کردن محصول مناسب</td></tr>
+    <tr><td>4. Evaluation</td><td>«آیا می‌توانم به این اعتماد کنم؟»</td><td>کاهش ریسک</td></tr>
+    <tr><td>5. Purchase</td><td>«بخرمش؟»</td><td>تبدیل</td></tr>
+    <tr><td>6. Activation</td><td>«حالا با چیزی که خریدم چه کنم؟»</td><td>رسیدن به نتیجه</td></tr>
+    <tr><td>7. Expansion</td><td>«چه چیز دیگری لازم دارم؟»</td><td>خرید مجدد و LTV</td></tr>
+  </tbody>
+</table>
+
+<p>اما پشت این ۷ مرحله، یک <strong>Growth Loop</strong> هم داریم:</p>
+
+<p><strong>Successful Buyer → Review → Recommendation → New Buyer → More Sales → More Products → Better Marketplace</strong></p>
+
+<p>این قسمت بسیار مهم است؛ چون خریدار موفق خودش تبدیل به کانال جذب خریدار بعدی می‌شود.</p>
+
+<hr>
+
+<!-- ================= 1 ================= -->
+<h2 class="sec" id="sec-1">۱. Awareness — آشنا کردن بازار با MESH</h2>
+
+<p>در این مرحله هنوز نباید سعی کنیم محصول بفروشیم.</p>
+
+<p>هدف:</p>
+
+<blockquote><p>«MESH را به عنوان جایی بشناسند که می‌توانند راه‌حل‌های آماده برای کارهای واقعی پیدا کنند.»</p></blockquote>
+
+<h3>پیام اصلی</h3>
+
+<p>نه:</p>
+
+<blockquote><p>«ما Marketplace ایجنت‌های هوش مصنوعی هستیم.»</p></blockquote>
+
+<p>بلکه چیزی شبیه:</p>
+
+<blockquote><p><strong>راه‌حل‌های آماده برای اتوماسیون، AI و workflowهایی که واقعاً می‌توانید استفاده کنید.</strong></p></blockquote>
+
+<p>چون خریدار الزاماً دنبال «Agent» نیست.</p>
+
+<p>ممکن است دنبال این باشد:</p>
+
+<ul>
+  <li>اتوماسیون فروش</li>
+  <li>دستیار پشتیبانی</li>
+  <li>سیستم پردازش اسناد</li>
+  <li>workflow منابع انسانی</li>
+  <li>AI برای تولید محتوا</li>
+  <li>اتوماسیون گزارش‌گیری</li>
+</ul>
+
+<p>بنابراین <strong>Problem/Outcome باید جلوتر از Product Type باشد.</strong></p>
+
+<hr>
+
+<!-- ================= 2 ================= -->
+<h2 class="sec" id="sec-2">۲. کانال‌های Awareness</h2>
+
+<p>ماشین جذب خریدار باید چند ورودی داشته باشد.</p>
+
+<h3>Organic Search</h3>
+
+<p>مهم‌ترین دارایی بلندمدت.</p>
+
+<p>محتوا حول:</p>
+
+<ul>
+  <li>Problem</li>
+  <li>Use Case</li>
+  <li>Industry</li>
+  <li>Tool</li>
+  <li>Workflow</li>
+  <li>Comparison</li>
+  <li>Solution</li>
+</ul>
+
+<p>مثلاً کاربر سرچ می‌کند:</p>
+
+<blockquote><p>automate customer support</p></blockquote>
+
+<p>و به یک Use Case Landing در MESH می‌رسد.</p>
+
+<hr>
+
+<h3>Social</h3>
+
+<p>محتوای کوتاه:</p>
+
+<ul>
+  <li>Before / After</li>
+  <li>Demo</li>
+  <li>Use Case</li>
+  <li>نتیجه واقعی</li>
+  <li>Case Study</li>
+  <li>مقایسه</li>
+  <li>اشتباهات رایج</li>
+  <li>«این کار را در ۱۰ دقیقه اتوماتیک کن»</li>
+</ul>
+
+<hr>
+
+<h3>YouTube</h3>
+
+<p>برای محصولات پیچیده بسیار مهم است.</p>
+
+<p>مثلاً:</p>
+
+<blockquote><p>«چطور فرآیند Onboarding کارمند جدید را اتوماتیک کنیم؟»</p></blockquote>
+
+<p>در انتها:</p>
+
+<p><strong>راه‌حل آماده → MESH</strong></p>
+
+<hr>
+
+<h3>Communities</h3>
+
+<p>حضور در:</p>
+
+<ul>
+  <li>Reddit</li>
+  <li>Discord</li>
+  <li>Slack communities</li>
+  <li>LinkedIn communities</li>
+  <li>انجمن‌های تخصصی</li>
+</ul>
+
+<p>اما نه با اسپم.</p>
+
+<p>اول مشکل را حل کنیم، بعد MESH را معرفی کنیم.</p>
+
+<hr>
+
+<h3>Paid Acquisition</h3>
+
+<p>بعد از اینکه فهمیدیم:</p>
+
+<ul>
+  <li>کدام Use Case</li>
+  <li>کدام Audience</li>
+  <li>کدام Product</li>
+  <li>کدام Message</li>
+</ul>
+
+<p>تبدیل خوبی دارد، تبلیغات را روی همان‌ها Scale کنیم.</p>
+
+<hr>
+
+<!-- ================= 3 ================= -->
+<h2 class="sec" id="sec-3">۳. Problem Discovery</h2>
+
+<p>این قسمت برای MESH حیاتی است.</p>
+
+<p>کاربر ممکن است نداند چه Agentی می‌خواهد.</p>
+
+<p>پس نباید او را مجبور کنیم از همان ابتدا:</p>
+
+<blockquote><p>«Search Agents»</p></blockquote>
+
+<p>انجام دهد.</p>
+
+<p>باید بتواند بگوید:</p>
+
+<blockquote><p>«من چه کاری می‌خواهم انجام دهم؟»</p></blockquote>
+
+<p>مثلاً:</p>
+
+<blockquote><p>می‌خواهم پشتیبانی مشتری را اتوماتیک کنم.</p></blockquote>
+
+<p>MESH سپس:</p>
+
+<p><strong>Problem → Use Cases → Products</strong></p>
+
+<p>را به او نشان دهد.</p>
+
+<hr>
+
+<!-- ================= 4 ================= -->
+<h2 class="sec" id="sec-4">۴. Discovery Engine</h2>
+
+<p>اینجا باید یک سیستم چندلایه داشته باشیم:</p>
+
+<h3>Search</h3>
+
+<p>کاربر محصول خاصی را می‌خواهد.</p>
+
+<h3>Browse</h3>
+
+<p>هنوز نمی‌داند چه می‌خواهد.</p>
+
+<h3>Categories</h3>
+
+<p>مثلاً:</p>
+
+<ul>
+  <li>Sales</li>
+  <li>Marketing</li>
+  <li>Support</li>
+  <li>HR</li>
+  <li>Operations</li>
+  <li>Finance</li>
+</ul>
+
+<h3>Use Cases</h3>
+
+<p>مثلاً:</p>
+
+<blockquote><p>Automate customer support</p></blockquote>
+
+<h3>Industries</h3>
+
+<p>مثلاً:</p>
+
+<blockquote><p>برای SaaS</p></blockquote>
+
+<h3>Recommendations</h3>
+
+<p>مثلاً:</p>
+
+<blockquote><p>بر اساس چیزی که دنبال می‌کنید، این محصولات احتمالاً مناسب شما هستند.</p></blockquote>
+
+<hr>
+
+<!-- ================= 5 ================= -->
+<h2 class="sec" id="sec-5">۵. Product Discovery</h2>
+
+<p>وقتی کاربر محصولی پیدا کرد، صفحه محصول باید به یک <strong>Sales Page واقعی</strong> تبدیل شود.</p>
+
+<p>صفحه نباید فقط مشخصات فنی باشد.</p>
+
+<p>باید به کاربر جواب دهد:</p>
+
+<h3 class="q">این برای چه کسی است؟</h3>
+<h3 class="q">چه مشکلی را حل می‌کند؟</h3>
+<h3 class="q">چه چیزی دریافت می‌کنم؟</h3>
+<h3 class="q">چه چیزی دریافت نمی‌کنم؟</h3>
+<h3 class="q">چگونه اجرا می‌شود؟</h3>
+<h3 class="q">کجا اجرا می‌شود؟</h3>
+<h3 class="q">چه چیزهایی لازم دارد؟</h3>
+<h3 class="q">چه دسترسی‌هایی می‌خواهد؟</h3>
+<h3 class="q">چه داده‌هایی می‌بیند؟</h3>
+<h3 class="q">هزینه واقعی استفاده چیست؟</h3>
+<h3 class="q">سازنده چه کسی است؟</h3>
+<h3 class="q">آیا محصول بررسی شده؟</h3>
+<h3 class="q">چه کسانی از آن استفاده کرده‌اند؟</h3>
+<h3 class="q">نتیجه چه بوده؟</h3>
+
+<p>این دقیقاً جایی است که سیستم شفاف‌سازی Product Model که قبلاً برای MESH تعریف کردیم، تبدیل به ابزار فروش می‌شود.</p>
+
+<hr>
+
+<!-- ================= 6 ================= -->
+<h2 class="sec" id="sec-6">۶. Trust Layer</h2>
+
+<p>برای Marketplace، Trust یکی از مهم‌ترین قسمت‌های قیف است.</p>
+
+<p>خریدار باید بتواند در چند ثانیه تشخیص دهد:</p>
+
+<p><strong>Safe? Legit? Relevant?</strong></p>
+
+<p>پس Trust باید شامل:</p>
+
+<ul>
+  <li>Creator verification</li>
+  <li>Product review status</li>
+  <li>Security disclosure</li>
+  <li>Risk level</li>
+  <li>Permissions</li>
+  <li>Integrations</li>
+  <li>Data policy</li>
+  <li>Execution model</li>
+  <li>Delivery model</li>
+  <li>Requirements</li>
+  <li>Reviews</li>
+  <li>Ratings</li>
+  <li>Usage/sales signals</li>
+  <li>Version</li>
+  <li>Last update</li>
+  <li>Support information</li>
+</ul>
+
+<p>باشد.</p>
+
+<p>اما نکته مهم:</p>
+
+<p><strong>اطلاعات امنیتی نباید کاربر را بترساند.</strong></p>
+
+<p>باید ساده ترجمه شود.</p>
+
+<p>مثلاً:</p>
+
+<blockquote><p>این محصول برای اجرا به دسترسی Google Calendar نیاز دارد.</p></blockquote>
+
+<p>نه یک جدول پیچیده از permissionهای فنی.</p>
+
+<p>و در صورت نیاز:</p>
+
+<blockquote><p>چرا این دسترسی لازم است؟</p></blockquote>
+
+<hr>
+
+<!-- ================= 7 ================= -->
+<h2 class="sec" id="sec-7">۷. Evaluation</h2>
+
+<p>در این مرحله کاربر بین چند محصول تصمیم می‌گیرد.</p>
+
+<p>اینجا MESH باید ابزارهای تصمیم‌گیری بدهد.</p>
+
+<h3>Compare</h3>
+
+<p>کاربر بتواند ۲–۳ محصول را مقایسه کند.</p>
+
+<p>مثلاً:</p>
+
+<table>
+  <thead>
+    <tr><th></th><th class="c">Agent A</th><th class="c">Agent B</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>قیمت</td><td class="c">...</td><td class="c">...</td></tr>
+    <tr><td>Setup</td><td class="c">...</td><td class="c">...</td></tr>
+    <tr><td>Integrations</td><td class="c">...</td><td class="c">...</td></tr>
+    <tr><td>Risk</td><td class="c">...</td><td class="c">...</td></tr>
+    <tr><td>Delivery</td><td class="c">...</td><td class="c">...</td></tr>
+    <tr><td>Reviews</td><td class="c">...</td><td class="c">...</td></tr>
+  </tbody>
+</table>
+
+<h3>Alternatives</h3>
+
+<p>اگر محصول مناسب نیست:</p>
+
+<blockquote><p>شاید این گزینه برای شما مناسب‌تر باشد.</p></blockquote>
+
+<h3>Save</h3>
+
+<p>کاربر بتواند محصول را Save کند.</p>
+
+<h3>Ask / Clarify</h3>
+
+<p>در آینده حتی می‌توانیم:</p>
+
+<blockquote><p>نمی‌دانم کدام محصول مناسب من است.</p></blockquote>
+
+<p>را به یک <strong>Product Recommendation Flow</strong> تبدیل کنیم.</p>
+
+<hr>
+
+<!-- ================= 8 ================= -->
+<h2 class="sec" id="sec-8">۸. Conversion — خرید</h2>
+
+<p>وقتی کاربر آماده خرید شد، Checkout نباید اصطکاک داشته باشد.</p>
+
+<p>اصل:</p>
+
+<blockquote><p><strong>No surprises.</strong></p></blockquote>
+
+<p>قبل از پرداخت دقیقاً مشخص باشد:</p>
+
+<ul>
+  <li>چه چیزی می‌خرد</li>
+  <li>قیمت</li>
+  <li>مالیات/هزینه‌های احتمالی</li>
+  <li>نوع تحویل</li>
+  <li>نیازمندی‌ها</li>
+  <li>شرایط استفاده</li>
+  <li>Refund policy</li>
+  <li>بعد از خرید چه اتفاقی می‌افتد</li>
+</ul>
+
+<hr>
+
+<!-- ================= 9 ================= -->
+<h2 class="sec" id="sec-9">۹. Checkout باید یک سؤال را جواب دهد</h2>
+
+<blockquote><p>«اگر الان Pay را بزنم، دقیقاً بعدش چه اتفاقی می‌افتد؟»</p></blockquote>
+
+<p>مثلاً:</p>
+
+<div class="flow">
+  <span class="step">پرداخت موفق</span>
+  <span class="arr">↓</span>
+  <span class="step">دسترسی/اطلاعات تحویل</span>
+  <span class="arr">↓</span>
+  <span class="step">Getting Started</span>
+  <span class="arr">↓</span>
+  <span class="step">اولین نتیجه</span>
+</div>
+
+<p>این جریان باید برای هر Product Type متناسب باشد.</p>
+
+<hr>
+
+<!-- ================= 10 ================= -->
+<h2 class="sec" id="sec-10">۱۰. Activation — مهم‌تر از Purchase</h2>
+
+<p>بسیاری از Marketplaceها اشتباه می‌کنند:</p>
+
+<p><strong>Purchase = Success</strong></p>
+
+<p>در حالی که:</p>
+
+<p><strong>Purchase ≠ Value</strong></p>
+
+<p>کاربر زمانی موفق شده که محصول را به نتیجه رسانده باشد.</p>
+
+<p>پس باید برای هر محصول:</p>
+
+<h3>First Value Event</h3>
+
+<p>تعریف کنیم.</p>
+
+<p>مثلاً:</p>
+
+<p>Customer Support Agent:</p>
+
+<blockquote><p>اولین تیکت را پردازش کرد.</p></blockquote>
+
+<p>Automation:</p>
+
+<blockquote><p>اولین workflow با موفقیت اجرا شد.</p></blockquote>
+
+<p>Template:</p>
+
+<blockquote><p>اولین خروجی تولید شد.</p></blockquote>
+
+<hr>
+
+<!-- ================= 11 ================= -->
+<h2 class="sec" id="sec-11">۱۱. Buyer Onboarding</h2>
+
+<p>بعد از خرید نباید کاربر را رها کنیم.</p>
+
+<p>صفحه:</p>
+
+<h3 class="emph">شروع کنیم</h3>
+
+<p>مثلاً:</p>
+
+<p><strong>مرحله ۱</strong><br>
+نیازمندی‌ها را آماده کن</p>
+
+<p><strong>مرحله ۲</strong><br>
+اتصال را انجام بده</p>
+
+<p><strong>مرحله ۳</strong><br>
+اولین اجرا</p>
+
+<p><strong>مرحله ۴</strong><br>
+نتیجه را بررسی کن</p>
+
+<p><strong>مرحله ۵</strong><br>
+بهینه‌سازی</p>
+
+<hr>
+
+<!-- ================= 12 ================= -->
+<h2 class="sec" id="sec-12">۱۲. Activation Assistance</h2>
+
+<p>اگر کاربر گیر کرد:</p>
+
+<blockquote><p>نیاز به کمک دارید؟</p></blockquote>
+
+<p>سه گزینه:</p>
+
+<p><strong>راهنمای سریع</strong></p>
+
+<p><strong>حل مشکل</strong></p>
+
+<p><strong>تماس با پشتیبانی</strong></p>
+
+<p>در محصولات پیچیده‌تر:</p>
+
+<blockquote><p>راه‌اندازی با کمک متخصص</p></blockquote>
+
+<p>می‌تواند یک Revenue Stream مستقل هم باشد.</p>
+
+<hr>
+
+<!-- ================= 13 ================= -->
+<h2 class="sec" id="sec-13">۱۳. Success</h2>
+
+<p>بعد از Activation باید بررسی کنیم:</p>
+
+<blockquote><p>آیا واقعاً به نتیجه رسید؟</p></blockquote>
+
+<p>مثلاً:</p>
+
+<ul>
+  <li>محصول فعال شد؟</li>
+  <li>اولین execution؟</li>
+  <li>چند بار استفاده؟</li>
+  <li>آیا به هدف رسید؟</li>
+  <li>آیا خطا داشت؟</li>
+  <li>آیا نیاز به کمک دارد؟</li>
+</ul>
+
+<p>این اطلاعات برای Customer Success و Retention حیاتی هستند.</p>
+
+<hr>
+
+<!-- ================= 14 ================= -->
+<h2 class="sec" id="sec-14">۱۴. Review Acquisition</h2>
+
+<p>وقتی کاربر واقعاً نتیجه گرفت:</p>
+
+<p><strong>همان موقع</strong> درخواست Review بدهیم.</p>
+
+<p>نه ۳۰ ثانیه بعد از خرید.</p>
+
+<p>مثلاً:</p>
+
+<blockquote><p>این محصول توانست کاری که می‌خواستید انجام دهد؟</p></blockquote>
+
+<p>اگر:</p>
+
+<div class="flow">
+  <span class="step">Yes</span>
+  <span class="arr">↓</span>
+  <span class="step">اگر یک دقیقه وقت دارید، تجربه‌تان را با دیگران به اشتراک بگذارید.</span>
+</div>
+
+<p>این Review برای:</p>
+
+<ul>
+  <li>Product Page</li>
+  <li>SEO</li>
+  <li>Social</li>
+  <li>Creator</li>
+  <li>Ads</li>
+</ul>
+
+<p>قابل استفاده می‌شود.</p>
+
+<hr>
+
+<!-- ================= 15 ================= -->
+<h2 class="sec" id="sec-15">۱۵. Retention</h2>
+
+<p>هدف بعدی:</p>
+
+<blockquote><p>کاربر دوباره برگردد.</p></blockquote>
+
+<p>چرا؟</p>
+
+<p>سه مسیر:</p>
+
+<h3>Product Expansion</h3>
+
+<p>محصول دیگری برای همان مشکل.</p>
+
+<h3>Workflow Expansion</h3>
+
+<p>مشکل بعدی.</p>
+
+<h3>Marketplace Expansion</h3>
+
+<p>محصولات مرتبط.</p>
+
+<p>مثلاً:</p>
+
+<p>Customer Support Agent خریدی.</p>
+
+<p>بعد:</p>
+
+<blockquote><p>این ۳ ابزار می‌توانند سیستم پشتیبانی شما را کامل‌تر کنند.</p></blockquote>
+
+<hr>
+
+<!-- ================= 16 ================= -->
+<h2 class="sec" id="sec-16">۱۶. Personalization</h2>
+
+<p>بعد از چند رفتار، MESH باید بتواند بفهمد:</p>
+
+<blockquote><p>این Buyer احتمالاً چه چیزی لازم دارد؟</p></blockquote>
+
+<p>بر اساس:</p>
+
+<ul>
+  <li>searches</li>
+  <li>viewed products</li>
+  <li>purchases</li>
+  <li>categories</li>
+  <li>industry</li>
+  <li>usage</li>
+  <li>saved products</li>
+</ul>
+
+<hr>
+
+<!-- ================= 17 ================= -->
+<h2 class="sec" id="sec-17">۱۷. Buyer Lifecycle</h2>
+
+<p>من Lifecycle خریدار را این‌طور تعریف می‌کنم:</p>
+
+<div class="flow">
+  <span class="step">Visitor</span>
+  <span class="arr">↓</span>
+  <span class="step">Explorer</span>
+  <span class="arr">↓</span>
+  <span class="step">Intent User</span>
+  <span class="arr">↓</span>
+  <span class="step">Evaluator</span>
+  <span class="arr">↓</span>
+  <span class="step">Buyer</span>
+  <span class="arr">↓</span>
+  <span class="step">Activated Buyer</span>
+  <span class="arr">↓</span>
+  <span class="step">Successful Buyer</span>
+  <span class="arr">↓</span>
+  <span class="step">Returning Buyer</span>
+  <span class="arr">↓</span>
+  <span class="step">Advocate</span>
+</div>
+
+<p>این Lifecycle باید در CRM و Analytics قابل مشاهده باشد.</p>
+
+<hr>
+
+<!-- ================= 18 ================= -->
+<h2 class="sec" id="sec-18">۱۸. Buyer CRM</h2>
+
+<p>برای خریدار هم مشابه سیستم Creator CRM که داریم باید Buyer Intelligence داشته باشیم.</p>
+
+<p>مثلاً:</p>
+
+<ul>
+  <li>acquisition source</li>
+  <li>industry</li>
+  <li>interests</li>
+  <li>viewed categories</li>
+  <li>saved products</li>
+  <li>purchased products</li>
+  <li>activation status</li>
+  <li>support status</li>
+  <li>LTV</li>
+  <li>last activity</li>
+  <li>churn risk</li>
+</ul>
+
+<hr>
+
+<!-- ================= 19 ================= -->
+<h2 class="sec" id="sec-19">۱۹. Retention Automation</h2>
+
+<p>مثلاً:</p>
+
+<h3>بعد از ثبت‌نام</h3>
+
+<p>Welcome.</p>
+
+<h3>بعد از مشاهده چند محصول</h3>
+
+<p>Recommendation.</p>
+
+<h3>بعد از خرید</h3>
+
+<p>Getting Started.</p>
+
+<h3>اگر فعال نشد</h3>
+
+<p>Help.</p>
+
+<h3>اگر فعال شد</h3>
+
+<p>Review.</p>
+
+<h3>بعد از موفقیت</h3>
+
+<p>Related products.</p>
+
+<h3>بعد از مدتی عدم فعالیت</h3>
+
+<p>Reactivation.</p>
+
+<p>این می‌شود:</p>
+
+<p><strong>Buyer Lifecycle Marketing</strong></p>
+
+<hr>
+
+<!-- ================= 20 ================= -->
+<h2 class="sec" id="sec-20">۲۰. Win-back</h2>
+
+<p>اگر کاربر مدتی برنگشت:</p>
+
+<p>نه:</p>
+
+<blockquote><p>مدت زیادی است نیامده‌اید.</p></blockquote>
+
+<p>بلکه:</p>
+
+<blockquote><p>محصولاتی که ممکن است برای کار شما مفید باشند.</p></blockquote>
+
+<p>یا:</p>
+
+<blockquote><p>یک راه جدید برای اتوماتیک کردن X پیدا کردیم.</p></blockquote>
+
+<hr>
+
+<!-- ================= 21 ================= -->
+<h2 class="sec" id="sec-21">۲۱. Buyer Referral</h2>
+
+<p>Buyer موفق هم می‌تواند تبدیل به Acquisition Channel شود.</p>
+
+<p>مثلاً:</p>
+
+<blockquote><p>این محصول برای همکارانتان هم مفید است؟</p></blockquote>
+
+<p><strong>Invite</strong></p>
+
+<p>و در آینده:</p>
+
+<p>Buyer Referral Program.</p>
+
+<hr>
+
+<!-- ================= 22 ================= -->
+<h2 class="sec" id="sec-22">۲۲. Buyer → Creator</h2>
+
+<p>یک فرصت بسیار مهم:</p>
+
+<p>ممکن است خریدار بعد از استفاده از MESH بگوید:</p>
+
+<blockquote><p>من هم می‌توانم چنین چیزی بسازم.</p></blockquote>
+
+<p>اینجا باید مسیر:</p>
+
+<p><strong>Buyer → Creator</strong></p>
+
+<p>داشته باشیم.</p>
+
+<p>مثلاً:</p>
+
+<blockquote><p>تجربه‌تان را به محصول تبدیل کنید.</p></blockquote>
+
+<p>و وارد Creator Funnel شود.</p>
+
+<p>این یکی از قوی‌ترین حلقه‌های رشد MESH است.</p>
+
+<hr>
+
+<!-- ================= 23 ================= -->
+<h2 class="sec" id="sec-23">۲۳. کل ماشین درآمد خریدار</h2>
+
+<p>پس در نهایت چیزی شبیه این داریم:</p>
+
+<pre>Traffic
+   ↓
+Awareness
+   ↓
+Problem Discovery
+   ↓
+Product Discovery
+   ↓
+Evaluation
+   ↓
+Trust
+   ↓
+Purchase
+   ↓
+Activation
+   ↓
+Success
+   ↓
+Review
+   ↓
+Repeat Purchase
+   ↓
+Advocacy
+   ↓
+Referral
+   ↓
+New Buyer</pre>
+
+<p>و یک شاخه بسیار مهم:</p>
+
+<pre>Successful Buyer
+        ↓
+   Creator Interest
+        ↓
+   Creator Funnel
+        ↓
+New Product
+        ↓
+Marketplace Growth</pre>
+
+<hr>
+
+<!-- ================= 24 ================= -->
+<h2 class="sec" id="sec-24">۲۴. کانال‌های جذب خریدار</h2>
+
+<p>حالا اگر بخواهیم واقعاً یک ماشین Acquisition بسازیم، من کانال‌ها را این‌طور اولویت‌بندی می‌کنم:</p>
+
+<h3>Tier 1 — Organic</h3>
+
+<ul>
+  <li>SEO</li>
+  <li>Use-case pages</li>
+  <li>Product pages</li>
+  <li>Comparison pages</li>
+  <li>Educational content</li>
+</ul>
+
+<h3>Tier 2 — Distribution</h3>
+
+<ul>
+  <li>Social</li>
+  <li>YouTube</li>
+  <li>Communities</li>
+  <li>Creator audience</li>
+  <li>Creator referral</li>
+</ul>
+
+<h3>Tier 3 — Partnerships</h3>
+
+<ul>
+  <li>Agencies</li>
+  <li>Consultants</li>
+  <li>Communities</li>
+  <li>SaaS ecosystems</li>
+  <li>Automation experts</li>
+</ul>
+
+<h3>Tier 4 — Paid</h3>
+
+<ul>
+  <li>Search Ads</li>
+  <li>Social Ads</li>
+  <li>Retargeting</li>
+  <li>Product-specific campaigns</li>
+</ul>
+
+<p>اما Paid را <strong>بعد از پیدا کردن Product-Market-Message Fit</strong> جدی Scale می‌کنیم.</p>
+
+<hr>
+
+<!-- ================= 25 ================= -->
+<h2 class="sec" id="sec-25">۲۵. مهم‌ترین دارایی MESH: Creatorها</h2>
+
+<p>ما نباید تمام Buyer Acquisition را خودمان انجام دهیم.</p>
+
+<p>Creator باید تبدیل شود به:</p>
+
+<p><strong>Product Creator + Distribution Channel</strong></p>
+
+<p>مثلاً وقتی یک Creator محصولش را منتشر می‌کند:</p>
+
+<p>MESH باید به او ابزار بدهد:</p>
+
+<ul>
+  <li>Share</li>
+  <li>Social Card</li>
+  <li>Referral Link</li>
+  <li>Campaign</li>
+  <li>Email Template</li>
+  <li>Demo Link</li>
+  <li>Product Page</li>
+  <li>Tracking</li>
+</ul>
+
+<p>بنابراین هر Product جدید می‌تواند یک Mini Acquisition Campaign داشته باشد.</p>
+
+<hr>
+
+<!-- ================= 26 ================= -->
+<h2 class="sec" id="sec-26">۲۶. Marketplace Flywheel</h2>
+
+<p>در نهایت مدل رشد ایده‌آل MESH:</p>
+
+<pre>More Creators
+      ↓
+More Products
+      ↓
+More Use Cases
+      ↓
+More SEO Pages
+      ↓
+More Traffic
+      ↓
+More Buyers
+      ↓
+More Sales
+      ↓
+More Creator Success
+      ↓
+More Reviews
+      ↓
+More Trust
+      ↓
+More Buyers
+      ↓
+More Creators</pre>
+
+<p>این همان چیزی است که باید بسازیم.</p>
+
+<hr>
+
+<!-- ================= 27 ================= -->
+<h2 class="sec" id="sec-27">۲۷. KPIهای اصلی</h2>
+
+<p>نباید صدها KPI داشته باشیم.</p>
+
+<p>در ابتدا این‌ها کافی‌اند:</p>
+
+<h3>Acquisition</h3>
+
+<ul>
+  <li>Visitors</li>
+  <li>Signup rate</li>
+  <li>Cost per acquired buyer</li>
+</ul>
+
+<h3>Discovery</h3>
+
+<ul>
+  <li>Search → Product view</li>
+  <li>Product view → Checkout</li>
+</ul>
+
+<h3>Conversion</h3>
+
+<ul>
+  <li>Checkout → Purchase</li>
+  <li>Purchase conversion rate</li>
+</ul>
+
+<h3>Activation</h3>
+
+<ul>
+  <li>Purchase → First Value</li>
+  <li>Time to First Value</li>
+</ul>
+
+<h3>Retention</h3>
+
+<ul>
+  <li>Repeat purchase</li>
+  <li>Active buyer rate</li>
+  <li>30/60/90-day retention</li>
+</ul>
+
+<h3>Economics</h3>
+
+<ul>
+  <li>AOV</li>
+  <li>Buyer LTV</li>
+  <li>CAC</li>
+  <li>LTV/CAC</li>
+</ul>
+
+<h3>Trust</h3>
+
+<ul>
+  <li>Review rate</li>
+  <li>Rating</li>
+  <li>Refund rate</li>
+  <li>Support rate</li>
+</ul>
+
+<hr>
+
+<!-- ================= 28 ================= -->
+<h2 class="sec" id="sec-28">۲۸. چیزی که باید از همین ابتدا اندازه بگیریم</h2>
+
+<p>برای هر Buyer باید بتوانیم این سؤال را جواب دهیم:</p>
+
+<blockquote><p>این کاربر از کجا آمد؟</p></blockquote>
+
+<blockquote><p>چه چیزی جستجو کرد؟</p></blockquote>
+
+<blockquote><p>چه محصولاتی دید؟</p></blockquote>
+
+<blockquote><p>چرا این محصول را انتخاب کرد؟</p></blockquote>
+
+<blockquote><p>خرید کرد؟</p></blockquote>
+
+<blockquote><p>فعال شد؟</p></blockquote>
+
+<blockquote><p>به نتیجه رسید؟</p></blockquote>
+
+<blockquote><p>Review داد؟</p></blockquote>
+
+<blockquote><p>دوباره خرید کرد؟</p></blockquote>
+
+<blockquote><p>کسی را دعوت کرد؟</p></blockquote>
+
+<p>این یعنی <strong>Full-funnel attribution</strong>.</p>
+
+<hr>
+
+<!-- ================= 29 ================= -->
+<h2 class="sec" id="sec-29">۲۹. اولویت اجرای ماشین</h2>
+
+<p>اگر بخواهم این پروژه را عملیاتی کنم، همه‌چیز را همزمان نمی‌سازم.</p>
+
+<h3>مرحله 1 — Foundation</h3>
+
+<ul>
+  <li>Buyer lifecycle</li>
+  <li>Analytics</li>
+  <li>Attribution</li>
+  <li>Buyer CRM</li>
+  <li>Event tracking</li>
+</ul>
+
+<h3>مرحله 2 — Acquisition</h3>
+
+<ul>
+  <li>SEO</li>
+  <li>Use-case landing pages</li>
+  <li>Product pages</li>
+  <li>Search</li>
+  <li>Social distribution</li>
+</ul>
+
+<h3>مرحله 3 — Conversion</h3>
+
+<ul>
+  <li>Product education</li>
+  <li>Trust</li>
+  <li>Comparison</li>
+  <li>Checkout optimization</li>
+</ul>
+
+<h3>مرحله 4 — Activation</h3>
+
+<ul>
+  <li>Buyer onboarding</li>
+  <li>Getting Started</li>
+  <li>First Value</li>
+  <li>Support</li>
+</ul>
+
+<h3>مرحله 5 — Retention</h3>
+
+<ul>
+  <li>Recommendations</li>
+  <li>Related products</li>
+  <li>Lifecycle messaging</li>
+  <li>Win-back</li>
+</ul>
+
+<h3>مرحله 6 — Advocacy</h3>
+
+<ul>
+  <li>Reviews</li>
+  <li>Buyer referral</li>
+  <li>Social proof</li>
+  <li>Case studies</li>
+</ul>
+
+<h3>مرحله 7 — Expansion</h3>
+
+<ul>
+  <li>Cross-sell</li>
+  <li>Upsell</li>
+  <li>Buyer → Creator</li>
+  <li>Partnerships</li>
+  <li>Paid acquisition</li>
+</ul>
+
+<hr>
+
+<!-- ================= 30 ================= -->
+<h2 class="sec" id="sec-30">۳۰. یک تفاوت خیلی مهم با قیف Creator</h2>
+
+<p>قیف Creator عمدتاً این بود:</p>
+
+<p><strong>آشنایی → اعتماد → ساخت → ارسال → تأیید → انتشار → فروش → موفقیت → رشد</strong></p>
+
+<p>اما Buyer باید این باشد:</p>
+
+<p><strong>مشکل → کشف راه‌حل → پیدا کردن محصول → اعتماد → خرید → راه‌اندازی → نتیجه → بازگشت → توصیه</strong></p>
+
+<p>یعنی <strong>Buyer Funnel باید Outcome-driven باشد، نه Product-driven.</strong></p>
+
+<p>این به نظرم یکی از مهم‌ترین تصمیم‌های استراتژیک MESH است.</p>
+
+<hr>
+
+<!-- ================= نهایتاً ================= -->
+<h2 class="sec" id="sec-final">و نهایتاً ماشین درآمد MESH</h2>
+
+<p>اگر همه این‌ها را کنار هم بگذاریم، MESH دیگر فقط یک Marketplace نیست.</p>
+
+<p>بلکه تبدیل می‌شود به:</p>
+
+<p><strong>Creator Engine</strong><br>
+→ تولید محصول</p>
+
+<p><strong>Marketplace</strong><br>
+→ کشف و خرید</p>
+
+<p><strong>Buyer Success Engine</strong><br>
+→ رسیدن به نتیجه</p>
+
+<p><strong>Growth Engine</strong><br>
+→ Review + Referral + Creator acquisition</p>
+
+<p>و این چهار قسمت یک چرخه واحد می‌سازند:</p>
+
+<blockquote><p><strong>Creators create → Buyers discover → Buyers succeed → Success creates trust → Trust drives more buyers → Buyers become creators → Creators create more products.</strong></p></blockquote>
+
+<p>به نظرم <strong>این باید نقشه مادر Marketing خریداران MESH باشد</strong>.</p>
+
+<p>قدم بعدی را هم پیشنهاد می‌کنم دقیقاً مثل کاری که برای Creator انجام دادیم انجام دهیم: این نقشه را به <strong>فازهای B/C مخصوص Buyer</strong> تقسیم کنیم و برای هر فاز، یکی‌یکی UI/UX، پنل Buyer، پنل Admin، وب‌سایت، کانال‌های inbound/outbound، Backend و KPIها را فریز کنیم؛ بعد تازه برویم سراغ مقایسه با MESH فعلی و پرامپت‌های اجرایی.</p>
+
+<div class="orn">✦ ✦ ✦</div>
+
+<!-- ================= بخش دوم: سه اسپرینت ================= -->
+<p class="lead">دقیقاً. با توجه به چیزی که تا اینجا برای <strong>قیف خریدار</strong> فریز کردیم، بهتر است دیگر پراکنده جلو نرویم و کل سیستم Buyer Marketing را به <strong>۳ Sprint بزرگ</strong> تقسیم کنیم؛ به‌طوری‌که هر Sprint هم‌زمان سه لایه داشته باشد:</p>
+
+<ol>
+  <li><strong>مش (پلتفرم)</strong> — چیزی که خریدار داخل محصول تجربه می‌کند.</li>
+  <li><strong>سایت مش</strong> — جذب، آموزش، SEO، Landing و Conversion.</li>
+  <li><strong>خارج از مش</strong> — Social، محتوا، تبلیغات، Community، Email، Partnership و Retargeting.</li>
+</ol>
+
+<p>هدف این نیست که فقط «مارکتینگ» بسازیم؛ هدف این است که یک <strong>ماشین جذب → اعتماد → کشف → خرید → استفاده → تکرار خرید → ارجاع</strong> بسازیم.</p>
+
+<hr>
+
+<!-- ================= نقشه نهایی ================= -->
+<h2 class="sec" id="sec-growth">نقشه نهایی Buyer Growth</h2>
+
+<h3>مسیر اصلی خریدار</h3>
+
+<p><strong>Discover → Understand → Trust → Explore → Activate → Purchase → Onboard → Succeed → Return → Recommend</strong></p>
+
+<p>و سه Sprint را این‌طور می‌چینیم:</p>
+
+<table>
+  <thead>
+    <tr><th>Sprint</th><th>هدف</th><th>خروجی اصلی</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Sprint 1 — Acquisition &amp; Discovery</strong></td><td>آوردن خریدار مناسب و کمک به فهم محصول</td><td>Traffic + Leads + Account</td></tr>
+    <tr><td><strong>Sprint 2 — Activation &amp; Conversion</strong></td><td>تبدیل بازدیدکننده به خریدار</td><td>First Purchase</td></tr>
+    <tr><td><strong>Sprint 3 — Retention &amp; Scale</strong></td><td>تبدیل خریدار به مشتری دائمی و موتور رشد</td><td>Repeat Purchase + Referral</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<!-- ================= SPRINT 1 ================= -->
+<h2 class="sec" id="sec-s1">🟦 SPRINT 1 — Acquisition &amp; Discovery</h2>
+
+<h3>هدف</h3>
+
+<p>در این Sprint هنوز نباید وسواس اصلی ما روی «فروش» باشد.</p>
+
+<p>اول باید کاری کنیم کاربر بفهمد:</p>
+
+<blockquote><p>AgentHub چیست؟</p></blockquote>
+
+<blockquote><p>چه چیزی می‌توانم از آن بخرم؟</p></blockquote>
+
+<blockquote><p>این محصول دقیقاً چه کاری برای من انجام می‌دهد؟</p></blockquote>
+
+<blockquote><p>آیا قابل اعتماد است؟</p></blockquote>
+
+<blockquote><p>آیا چیزی که می‌بینم واقعاً مناسب من است؟</p></blockquote>
+
+<hr>
+
+<!-- Epic B1 -->
+<h2 class="sec" id="sec-b1">Epic B1 — Buyer Positioning &amp; Education</h2>
+
+<h3>سایت</h3>
+
+<p>ساخت یک لایه آموزشی بسیار واضح:</p>
+
+<h3>Homepage</h3>
+
+<p>Sections:</p>
+
+<ul>
+  <li>Hero بسیار واضح</li>
+  <li>What can you buy?</li>
+  <li>How it works</li>
+  <li>Use cases</li>
+  <li>Featured products</li>
+  <li>Product types</li>
+  <li>برای چه کسانی مناسب است؟</li>
+  <li>چگونه یک محصول را انتخاب کنیم؟</li>
+  <li>Trust &amp; Safety</li>
+  <li>Reviews</li>
+  <li>FAQ</li>
+  <li>CTA</li>
+</ul>
+
+<h3>صفحات آموزشی</h3>
+
+<ul>
+  <li>What is an AI Agent?</li>
+  <li>What is an AI Workflow?</li>
+  <li>What is an Automation?</li>
+  <li>What am I actually buying?</li>
+  <li>How delivery works</li>
+  <li>Where does the product run?</li>
+  <li>Who is responsible for setup?</li>
+  <li>What integrations are required?</li>
+</ul>
+
+<p>این قسمت مستقیماً به سیستم شفاف‌سازی Product Type / Delivery / Runtime که قبلاً ساختیم وصل می‌شود.</p>
+
+<hr>
+
+<!-- Epic B2 -->
+<h2 class="sec" id="sec-b2">Epic B2 — Use-Case Landing Pages</h2>
+
+<p>به جای اینکه فقط بگوییم:</p>
+
+<blockquote><p>«ایجنت بخرید»</p></blockquote>
+
+<p>باید بگوییم:</p>
+
+<blockquote><p>«برای حل X این محصولات را ببین.»</p></blockquote>
+
+<p>مثلاً:</p>
+
+<ul>
+  <li>Customer Support</li>
+  <li>Sales</li>
+  <li>Marketing</li>
+  <li>HR</li>
+  <li>Operations</li>
+  <li>Lead Generation</li>
+  <li>Content</li>
+  <li>Productivity</li>
+  <li>Data &amp; Reporting</li>
+  <li>E-commerce</li>
+</ul>
+
+<p>هر Use Case باید به محصولات واقعی Marketplace وصل شود.</p>
+
+<hr>
+
+<!-- Epic B3 -->
+<h2 class="sec" id="sec-b3">Epic B3 — SEO Engine</h2>
+
+<p>ساخت ساختار SEO دائمی:</p>
+
+<h3>Product pages</h3>
+
+<p>هر محصول یک صفحه indexable قوی.</p>
+
+<h3>Category pages</h3>
+
+<p>مثلاً:</p>
+
+<blockquote><p>AI Agents for Customer Support</p></blockquote>
+
+<h3>Use-case pages</h3>
+
+<blockquote><p>AI automation for lead generation</p></blockquote>
+
+<h3>Comparison pages</h3>
+
+<p>مثلاً:</p>
+
+<blockquote><p>Best AI agents for customer support</p></blockquote>
+
+<h3>Educational content</h3>
+
+<p>مثلاً:</p>
+
+<blockquote><p>How to automate customer support with AI</p></blockquote>
+
+<p>هدف:</p>
+
+<p><strong>Google → Content → Marketplace → Product → Purchase</strong></p>
+
+<hr>
+
+<!-- Epic B4 -->
+<h2 class="sec" id="sec-b4">Epic B4 — Marketplace Discovery</h2>
+
+<p>این قسمت داخل مش بسیار مهم است.</p>
+
+<p>Marketplace باید فقط «لیست محصولات» نباشد.</p>
+
+<p>باید تبدیل شود به:</p>
+
+<blockquote><p><strong>Product Discovery Engine</strong></p></blockquote>
+
+<h3>امکانات:</h3>
+
+<ul>
+  <li>Search</li>
+  <li>Semantic search</li>
+  <li>Categories</li>
+  <li>Use cases</li>
+  <li>Product type</li>
+  <li>Delivery model</li>
+  <li>Runtime</li>
+  <li>Price</li>
+  <li>Free</li>
+  <li>Rating</li>
+  <li>Reviews</li>
+  <li>Trust level</li>
+  <li>Verification</li>
+  <li>Integration</li>
+  <li>Difficulty</li>
+  <li>Setup requirement</li>
+</ul>
+
+<p>و مهم‌تر:</p>
+
+<h3>Smart recommendation</h3>
+
+<p>مثلاً کاربر بنویسد:</p>
+
+<blockquote><p>«یک چیزی می‌خواهم که تیکت‌های پشتیبانی را دسته‌بندی کند.»</p></blockquote>
+
+<p>سیستم محصولات مرتبط را پیشنهاد دهد.</p>
+
+<hr>
+
+<!-- Epic B5 -->
+<h2 class="sec" id="sec-b5">Epic B5 — Buyer Lead Capture</h2>
+
+<p>تمام Traffic نباید مجبور باشد فوراً خرید کند.</p>
+
+<p>برای کاربرهایی که هنوز آماده خرید نیستند:</p>
+
+<ul>
+  <li>Newsletter</li>
+  <li>Saved products</li>
+  <li>Wishlist</li>
+  <li>Price alerts</li>
+  <li>New product alerts</li>
+  <li>Personalized recommendations</li>
+  <li>Use-case guides</li>
+</ul>
+
+<p>ساخته شود.</p>
+
+<hr>
+
+<!-- Epic B6 -->
+<h2 class="sec" id="sec-b6">Epic B6 — Trust Infrastructure</h2>
+
+<p>قبل از خرید باید ترس کاربر را کم کنیم.</p>
+
+<p>برای هر محصول:</p>
+
+<ul>
+  <li>Creator verification</li>
+  <li>Product verification</li>
+  <li>Security disclosure</li>
+  <li>Permissions</li>
+  <li>Data policy</li>
+  <li>Integrations</li>
+  <li>Runtime</li>
+  <li>Delivery</li>
+  <li>Requirements</li>
+  <li>Reviews</li>
+  <li>Purchase history</li>
+  <li>Version</li>
+  <li>Last updated</li>
+  <li>Risk level</li>
+</ul>
+
+<p>و مهم‌تر:</p>
+
+<h3>«قبل از خرید بدانید چه چیزی دریافت می‌کنید»</h3>
+
+<p>این باید یکی از ستون‌های اصلی برند باشد.</p>
+
+<hr>
+
+<!-- Epic B7 -->
+<h2 class="sec" id="sec-b7">Epic B7 — External Acquisition</h2>
+
+<p>خارج از مش:</p>
+
+<h3>Organic</h3>
+
+<ul>
+  <li>SEO</li>
+  <li>LinkedIn</li>
+  <li>X</li>
+  <li>Instagram</li>
+  <li>YouTube</li>
+  <li>Short-form video</li>
+  <li>Blog</li>
+  <li>Communities</li>
+  <li>Reddit/Forums where appropriate</li>
+  <li>AI/automation communities</li>
+</ul>
+
+<h3>Paid</h3>
+
+<p>بعد از پیدا شدن Product-Market Fit:</p>
+
+<ul>
+  <li>Google Search</li>
+  <li>Meta</li>
+  <li>LinkedIn</li>
+  <li>Retargeting</li>
+</ul>
+
+<h3>Partnerships</h3>
+
+<ul>
+  <li>Automation communities</li>
+  <li>AI educators</li>
+  <li>Consultants</li>
+  <li>Agencies</li>
+  <li>Newsletter owners</li>
+  <li>AI influencers</li>
+</ul>
+
+<hr>
+
+<!-- خروجی Sprint 1 -->
+<h2 class="sec" id="sec-s1out">خروجی Sprint 1</h2>
+
+<p>در پایان Sprint 1 باید این مسیر وجود داشته باشد:</p>
+
+<div class="flow">
+  <span class="step">Google / Social / Content / Community / Ads</span>
+  <span class="arr">↓</span>
+  <span class="step">Landing / Marketplace</span>
+  <span class="arr">↓</span>
+  <span class="step">Education</span>
+  <span class="arr">↓</span>
+  <span class="step">Product Discovery</span>
+  <span class="arr">↓</span>
+  <span class="step">Account</span>
+  <span class="arr">↓</span>
+  <span class="step">Wishlist / Follow / Recommendation</span>
+</div>
+
+<hr>
+
+<!-- ================= SPRINT 2 ================= -->
+<h2 class="sec" id="sec-s2">🟨 SPRINT 2 — Activation &amp; Conversion</h2>
+
+<p>اینجا وارد بخش پول‌سازی واقعی می‌شویم.</p>
+
+<p>هدف:</p>
+
+<blockquote><p>کاربر فقط Marketplace را نبیند؛ اولین محصول مناسبش را پیدا کند و بخرد.</p></blockquote>
+
+<hr>
+
+<!-- Epic B8 -->
+<h2 class="sec" id="sec-b8">Epic B8 — Buyer Onboarding</h2>
+
+<p>بعد از Signup نباید کاربر را رها کنیم.</p>
+
+<p>یک onboarding سبک:</p>
+
+<h3 class="q">سؤال ۱</h3>
+<p>چه کاری می‌خواهید انجام دهید؟</p>
+
+<h3 class="q">سؤال ۲</h3>
+<p>برای چه کسب‌وکاری؟</p>
+
+<h3 class="q">سؤال ۳</h3>
+<p>سطح فنی شما؟</p>
+
+<h3 class="q">سؤال ۴</h3>
+<p>چه نوع محصولی می‌خواهید؟</p>
+
+<h3 class="q">سؤال ۵</h3>
+<p>بودجه؟</p>
+
+<p>بعد:</p>
+
+<blockquote><p><strong>Recommended for you</strong></p></blockquote>
+
+<hr>
+
+<!-- Epic B9 -->
+<h2 class="sec" id="sec-b9">Epic B9 — Personalized Marketplace</h2>
+
+<p>داشبورد خریدار باید بر اساس رفتار کاربر تغییر کند.</p>
+
+<p>مثلاً:</p>
+
+<h3 class="q">Recommended for you</h3>
+<h3 class="q">Based on your interests</h3>
+<h3 class="q">Popular in your industry</h3>
+<h3 class="q">Similar to products you viewed</h3>
+<h3 class="q">Continue exploring</h3>
+<h3 class="q">Recently viewed</h3>
+<h3 class="q">Trending</h3>
+<h3 class="q">New releases</h3>
+
+<hr>
+
+<!-- Epic B10 -->
+<h2 class="sec" id="sec-b10">Epic B10 — Product Page Conversion</h2>
+
+<p>صفحه محصول باید مثل یک <strong>Sales Page + Technical Specification</strong> عمل کند.</p>
+
+<p>ساختار:</p>
+
+<ol>
+  <li>Product identity</li>
+  <li>One-line value proposition</li>
+  <li>Creator</li>
+  <li>Rating</li>
+  <li>Reviews</li>
+  <li>Verification</li>
+  <li>What you get</li>
+  <li>What it does</li>
+  <li>What it does NOT do</li>
+  <li>Demo</li>
+  <li>Screenshots</li>
+  <li>Video</li>
+  <li>Product type</li>
+  <li>Delivery</li>
+  <li>Runtime</li>
+  <li>Setup</li>
+  <li>Integrations</li>
+  <li>Permissions</li>
+  <li>Data policy</li>
+  <li>Requirements</li>
+  <li>Pricing</li>
+  <li>Reviews</li>
+  <li>FAQ</li>
+  <li>CTA</li>
+</ol>
+
+<hr>
+
+<!-- Epic B11 -->
+<h2 class="sec" id="sec-b11">Epic B11 — Purchase UX</h2>
+
+<p>Checkout باید بسیار ساده باشد.</p>
+
+<h3>قبل از پرداخت:</h3>
+
+<p>خلاصه:</p>
+
+<blockquote><p>شما در حال خرید X هستید.</p></blockquote>
+
+<p>نمایش:</p>
+
+<ul>
+  <li>قیمت</li>
+  <li>مالیات/کارمزد در صورت وجود</li>
+  <li>چیزی که دریافت می‌کنید</li>
+  <li>Delivery</li>
+  <li>Setup</li>
+  <li>Refund policy</li>
+  <li>Creator</li>
+  <li>Version</li>
+</ul>
+
+<h3>بعد از خرید</h3>
+
+<p>فوراً:</p>
+
+<p><strong>Purchase Success</strong></p>
+
+<p>و سپس:</p>
+
+<p><strong>What happens next?</strong></p>
+
+<p>کاربر هیچ‌وقت نباید بپرسد:</p>
+
+<blockquote><p>«خب الان چی خریدم؟ کجاست؟ باید چیکار کنم؟»</p></blockquote>
+
+<hr>
+
+<!-- Epic B12 -->
+<h2 class="sec" id="sec-b12">Epic B12 — Buyer Onboarding After Purchase</h2>
+
+<p>بعد از خرید:</p>
+
+<h3 class="q">Step 1</h3>
+<p>Purchase confirmed</p>
+
+<h3 class="q">Step 2</h3>
+<p>What you received</p>
+
+<h3 class="q">Step 3</h3>
+<p>How to access it</p>
+
+<h3 class="q">Step 4</h3>
+<p>How to set it up</p>
+
+<h3 class="q">Step 5</h3>
+<p>How to run it</p>
+
+<h3 class="q">Step 6</h3>
+<p>First successful outcome</p>
+
+<p>این قسمت بسیار مهم است.</p>
+
+<p>ما دنبال این نیستیم که:</p>
+
+<blockquote><p><strong>Purchase = Success</strong></p></blockquote>
+
+<p>بلکه:</p>
+
+<blockquote><p><strong>Purchase → Activation → First Value</strong></p></blockquote>
+
+<hr>
+
+<!-- Epic B13 -->
+<h2 class="sec" id="sec-b13">Epic B13 — First Value</h2>
+
+<p>باید برای هر Product یک:</p>
+
+<h3 class="emph">First Success Path</h3>
+
+<p>داشته باشیم.</p>
+
+<p>مثلاً:</p>
+
+<blockquote><p>در ۵ دقیقه اولین automation خود را اجرا کنید.</p></blockquote>
+
+<p>یا:</p>
+
+<blockquote><p>اولین ticket را با Agent پردازش کنید.</p></blockquote>
+
+<p>یا:</p>
+
+<blockquote><p>اولین report را دریافت کنید.</p></blockquote>
+
+<p>این نقطه یکی از مهم‌ترین KPIهای کل Marketplace خواهد بود.</p>
+
+<hr>
+
+<!-- Epic B14 -->
+<h2 class="sec" id="sec-b14">Epic B14 — Conversion Optimization</h2>
+
+<p>داخل سایت و مش:</p>
+
+<ul>
+  <li>A/B testing</li>
+  <li>CTA optimization</li>
+  <li>Pricing experiments</li>
+  <li>Product recommendation experiments</li>
+  <li>Checkout optimization</li>
+  <li>Search optimization</li>
+  <li>Empty-state optimization</li>
+  <li>Exit intent</li>
+  <li>Abandoned checkout</li>
+  <li>Saved product reminders</li>
+</ul>
+
+<hr>
+
+<!-- Epic B15 -->
+<h2 class="sec" id="sec-b15">Epic B15 — Buyer CRM</h2>
+
+<p>در پنل Admin باید بدانیم:</p>
+
+<ul>
+  <li>Visitor</li>
+  <li>Lead</li>
+  <li>Registered</li>
+  <li>Activated</li>
+  <li>Product viewer</li>
+  <li>Checkout started</li>
+  <li>Purchased</li>
+  <li>Activated product</li>
+  <li>Repeat buyer</li>
+  <li>Dormant</li>
+  <li>Churn risk</li>
+  <li>Advocate</li>
+</ul>
+
+<p>و بتوانیم براساس آنها Segment بسازیم.</p>
+
+<hr>
+
+<!-- Epic B16 -->
+<h2 class="sec" id="sec-b16">Epic B16 — Buyer Lifecycle Email</h2>
+
+<p>ایمیل‌ها باید Event-based باشند.</p>
+
+<p>مثلاً:</p>
+
+<h3>Welcome</h3>
+
+<blockquote><p>«به مش خوش آمدید»</p></blockquote>
+
+<h3>Product recommendation</h3>
+
+<blockquote><p>«چند محصول که ممکن است برای شما مناسب باشد»</p></blockquote>
+
+<h3>Abandoned checkout</h3>
+
+<blockquote><p>«هنوز این محصول را بررسی می‌کنید؟»</p></blockquote>
+
+<h3>Purchase</h3>
+
+<blockquote><p>«خرید شما تأیید شد»</p></blockquote>
+
+<h3>Activation</h3>
+
+<blockquote><p>«بیایید محصولتان را راه‌اندازی کنیم»</p></blockquote>
+
+<h3>First success</h3>
+
+<blockquote><p>«عالیه! اولین نتیجه را گرفتید.»</p></blockquote>
+
+<h3>Review</h3>
+
+<blockquote><p>«تجربه‌تان را با دیگران به اشتراک بگذارید.»</p></blockquote>
+
+<hr>
+
+<!-- خروجی Sprint 2 -->
+<h2 class="sec" id="sec-s2out">خروجی Sprint 2</h2>
+
+<p>مسیر باید تبدیل شود به:</p>
+
+<div class="flow">
+  <span class="step">Traffic</span>
+  <span class="arr">↓</span>
+  <span class="step">Marketplace</span>
+  <span class="arr">↓</span>
+  <span class="step">Personalization</span>
+  <span class="arr">↓</span>
+  <span class="step">Product Discovery</span>
+  <span class="arr">↓</span>
+  <span class="step">Product Page</span>
+  <span class="arr">↓</span>
+  <span class="step">Checkout</span>
+  <span class="arr">↓</span>
+  <span class="step">Purchase</span>
+  <span class="arr">↓</span>
+  <span class="step">Activation</span>
+  <span class="arr">↓</span>
+  <span class="step">First Value</span>
+</div>
+
+<hr>
+
+<!-- ================= SPRINT 3 ================= -->
+<h2 class="sec" id="sec-s3">🟩 SPRINT 3 — Retention &amp; Scale</h2>
+
+<p>اینجا خریدار را تبدیل می‌کنیم به:</p>
+
+<blockquote><p><strong>Repeat Buyer → Loyal Customer → Advocate</strong></p></blockquote>
+
+<hr>
+
+<!-- Epic B17 -->
+<h2 class="sec" id="sec-b17">Epic B17 — Buyer Dashboard 2.0</h2>
+
+<p>داشبورد خریدار باید مرکز زندگی او در مش باشد.</p>
+
+<h3 class="q">My Products</h3>
+<h3 class="q">Recently Used</h3>
+<h3 class="q">Favorites</h3>
+<h3 class="q">Recommendations</h3>
+<h3 class="q">Orders</h3>
+<h3 class="q">Downloads / Access</h3>
+<h3 class="q">Setup status</h3>
+<h3 class="q">Updates</h3>
+<h3 class="q">Reviews</h3>
+<h3 class="q">Support</h3>
+<h3 class="q">Saved searches</h3>
+
+<hr>
+
+<!-- Epic B18 -->
+<h2 class="sec" id="sec-b18">Epic B18 — Product Lifecycle</h2>
+
+<p>بعد از خرید، رابطه تمام نمی‌شود.</p>
+
+<p>برای هر محصول:</p>
+
+<ul>
+  <li>New version</li>
+  <li>Update</li>
+  <li>Security update</li>
+  <li>Integration update</li>
+  <li>Creator announcement</li>
+  <li>Documentation</li>
+  <li>Setup assistance</li>
+</ul>
+
+<hr>
+
+<!-- Epic B19 -->
+<h2 class="sec" id="sec-b19">Epic B19 — Review Engine</h2>
+
+<p>Review نباید فقط:</p>
+
+<p>⭐⭐⭐⭐⭐</p>
+
+<p>باشد.</p>
+
+<p>باید بتوانیم بفهمیم:</p>
+
+<ul>
+  <li>Did it solve your problem?</li>
+  <li>Ease of setup</li>
+  <li>Value for money</li>
+  <li>Reliability</li>
+  <li>Documentation</li>
+  <li>Would recommend?</li>
+</ul>
+
+<p>و Review مناسب را به Creator و Marketplace برگردانیم.</p>
+
+<hr>
+
+<!-- Epic B20 -->
+<h2 class="sec" id="sec-b20">Epic B20 — Re-Purchase Engine</h2>
+
+<p>سیستم باید تشخیص دهد:</p>
+
+<blockquote><p>این کاربر احتمالاً به محصول بعدی چه نیازی دارد؟</p></blockquote>
+
+<p>مثلاً:</p>
+
+<p>کاربر یک Customer Support Agent خریده.</p>
+
+<p>بعد:</p>
+
+<blockquote><p>«برای تکمیل سیستم پشتیبانی شما، این ۳ محصول را هم ببینید.»</p></blockquote>
+
+<p>اینجا Marketplace تبدیل می‌شود به:</p>
+
+<h3 class="emph">Product Ecosystem</h3>
+
+<p>نه فروشگاه تک‌محصولی.</p>
+
+<hr>
+
+<!-- Epic B21 -->
+<h2 class="sec" id="sec-b21">Epic B21 — Bundles</h2>
+
+<p>بعداً:</p>
+
+<h3 class="q">Starter Pack</h3>
+<h3 class="q">Customer Support Pack</h3>
+<h3 class="q">Sales Automation Pack</h3>
+<h3 class="q">Marketing Pack</h3>
+<h3 class="q">HR Pack</h3>
+<h3 class="q">Founder Pack</h3>
+
+<p>و غیره.</p>
+
+<p>این یکی از ابزارهای بسیار مهم افزایش AOV است.</p>
+
+<hr>
+
+<!-- Epic B22 -->
+<h2 class="sec" id="sec-b22">Epic B22 — Cross-sell / Upsell</h2>
+
+<p>مثلاً:</p>
+
+<blockquote><p>شما X را دارید؛ Y می‌تواند آن را کامل کند.</p></blockquote>
+
+<p>یا:</p>
+
+<blockquote><p>این محصول نسخه Pro دارد.</p></blockquote>
+
+<p>اما کاملاً context-aware، نه تبلیغاتی و آزاردهنده.</p>
+
+<hr>
+
+<!-- Epic B23 -->
+<h2 class="sec" id="sec-b23">Epic B23 — Referral</h2>
+
+<p>بعد از اینکه کاربر واقعاً ارزش دریافت کرد:</p>
+
+<blockquote><p>«این محصول را به دوستت معرفی کن.»</p></blockquote>
+
+<p>پاداش می‌تواند:</p>
+
+<ul>
+  <li>اعتبار خرید</li>
+  <li>تخفیف</li>
+  <li>کمیسیون</li>
+  <li>Credit</li>
+</ul>
+
+<p>باشد.</p>
+
+<hr>
+
+<!-- Epic B24 -->
+<h2 class="sec" id="sec-b24">Epic B24 — Buyer Community</h2>
+
+<p>کاربرهای فعال می‌توانند وارد Community شوند:</p>
+
+<ul>
+  <li>تجربه استفاده</li>
+  <li>آموزش</li>
+  <li>Use case</li>
+  <li>سؤال و جواب</li>
+  <li>Product discovery</li>
+  <li>Creator AMA</li>
+  <li>Product launches</li>
+</ul>
+
+<p>این Community بعداً خودش تبدیل به Acquisition Channel می‌شود.</p>
+
+<hr>
+
+<!-- Epic B25 -->
+<h2 class="sec" id="sec-b25">Epic B25 — Buyer Advocacy</h2>
+
+<p>بهترین کاربران را تبدیل کنیم به:</p>
+
+<ul>
+  <li>Reviewer</li>
+  <li>Case study</li>
+  <li>Testimonial</li>
+  <li>Ambassador</li>
+  <li>Referral partner</li>
+</ul>
+
+<hr>
+
+<!-- Epic B26 -->
+<h2 class="sec" id="sec-b26">Epic B26 — Buyer Analytics</h2>
+
+<p>در Admin باید این Funnel کاملاً قابل مشاهده باشد:</p>
+
+<pre>Visitors
+   ↓
+Marketplace Visitors
+   ↓
+Product Viewers
+   ↓
+Registered Users
+   ↓
+Activated Users
+   ↓
+Checkout Started
+   ↓
+Purchasers
+   ↓
+Activated Purchasers
+   ↓
+First Value
+   ↓
+Repeat Purchasers
+   ↓
+Advocates</pre>
+
+<p>برای هر مرحله:</p>
+
+<ul>
+  <li>تعداد</li>
+  <li>Conversion rate</li>
+  <li>Drop-off</li>
+  <li>Source</li>
+  <li>Campaign</li>
+  <li>Product</li>
+  <li>Category</li>
+  <li>Creator</li>
+  <li>Revenue</li>
+</ul>
+
+<hr>
+
+<!-- Epic B27 -->
+<h2 class="sec" id="sec-b27">Epic B27 — Growth Loop</h2>
+
+<p>در نهایت باید یک چرخه بسازیم:</p>
+
+<pre>Content
+   ↓
+Traffic
+   ↓
+Buyer
+   ↓
+Purchase
+   ↓
+Success
+   ↓
+Review
+   ↓
+Case Study
+   ↓
+Social Proof
+   ↓
+More Traffic
+   ↓
+More Buyers</pre>
+
+<p>و یک چرخه دوم:</p>
+
+<pre>Buyer
+ ↓
+Purchase
+ ↓
+Success
+ ↓
+Referral
+ ↓
+New Buyer
+ ↓
+Purchase</pre>
+
+<p>و چرخه سوم:</p>
+
+<pre>Buyer
+ ↓
+Purchase
+ ↓
+Needs more solutions
+ ↓
+Cross-sell
+ ↓
+Second Product
+ ↓
+Third Product
+ ↓
+Loyal Buyer</pre>
+
+<hr>
+
+<!-- ================= نقشه کل سه Sprint ================= -->
+<h2 class="sec" id="sec-map3">نقشه کل سه Sprint</h2>
+
+<p>برای اینکه دقیقاً بدانید چه چیزی باید ساخته شود:</p>
+
+<table>
+  <thead>
+    <tr><th>Epic</th><th class="c">Sprint</th><th class="c">مش</th><th class="c">سایت</th><th class="c">خارج از مش</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Buyer positioning</td><td class="c">S1</td><td class="dots">●</td><td class="dots">●●●</td><td class="dots">●●</td></tr>
+    <tr><td>Education</td><td class="c">S1</td><td class="dots">●</td><td class="dots">●●●</td><td class="dots">●●</td></tr>
+    <tr><td>SEO</td><td class="c">S1</td><td class="dots"></td><td class="dots">●●●</td><td class="dots">●</td></tr>
+    <tr><td>Use-case landing</td><td class="c">S1</td><td class="dots"></td><td class="dots">●●●</td><td class="dots">●●</td></tr>
+    <tr><td>Marketplace discovery</td><td class="c">S1</td><td class="dots">●●●</td><td class="dots">●●</td><td class="dots"></td></tr>
+    <tr><td>Trust</td><td class="c">S1</td><td class="dots">●●●</td><td class="dots">●●</td><td class="dots">●</td></tr>
+    <tr><td>Lead capture</td><td class="c">S1</td><td class="dots">●●</td><td class="dots">●●●</td><td class="dots">●●</td></tr>
+    <tr><td>Acquisition</td><td class="c">S1</td><td class="dots"></td><td class="dots">●●</td><td class="dots">●●●</td></tr>
+    <tr><td>Buyer onboarding</td><td class="c">S2</td><td class="dots">●●●</td><td class="dots">●</td><td class="dots"></td></tr>
+    <tr><td>Personalization</td><td class="c">S2</td><td class="dots">●●●</td><td class="dots">●●</td><td class="dots"></td></tr>
+    <tr><td>Product conversion</td><td class="c">S2</td><td class="dots">●●●</td><td class="dots">●●</td><td class="dots"></td></tr>
+    <tr><td>Checkout</td><td class="c">S2</td><td class="dots">●●●</td><td class="dots">●</td><td class="dots"></td></tr>
+    <tr><td>Post-purchase onboarding</td><td class="c">S2</td><td class="dots">●●●</td><td class="dots"></td><td class="dots"></td></tr>
+    <tr><td>First Value</td><td class="c">S2</td><td class="dots">●●●</td><td class="dots">●</td><td class="dots">●</td></tr>
+    <tr><td>Lifecycle email</td><td class="c">S2</td><td class="dots">●●</td><td class="dots"></td><td class="dots">●●●</td></tr>
+    <tr><td>Buyer CRM</td><td class="c">S2</td><td class="dots">●●●</td><td class="dots"></td><td class="dots">●</td></tr>
+    <tr><td>Buyer dashboard</td><td class="c">S3</td><td class="dots">●●●</td><td class="dots"></td><td class="dots"></td></tr>
+    <tr><td>Reviews</td><td class="c">S3</td><td class="dots">●●●</td><td class="dots">●</td><td class="dots">●</td></tr>
+    <tr><td>Cross-sell</td><td class="c">S3</td><td class="dots">●●●</td><td class="dots">●●</td><td class="dots">●</td></tr>
+    <tr><td>Bundles</td><td class="c">S3</td><td class="dots">●●●</td><td class="dots">●●</td><td class="dots">●</td></tr>
+    <tr><td>Referral</td><td class="c">S3</td><td class="dots">●●●</td><td class="dots">●</td><td class="dots">●●●</td></tr>
+    <tr><td>Community</td><td class="c">S3</td><td class="dots">●</td><td class="dots">●</td><td class="dots">●●●</td></tr>
+    <tr><td>Advocacy</td><td class="c">S3</td><td class="dots">●●</td><td class="dots">●</td><td class="dots">●●●</td></tr>
+    <tr><td>Analytics</td><td class="c">S3</td><td class="dots">●●●</td><td class="dots">●●</td><td class="dots">●</td></tr>
+    <tr><td>Growth loops</td><td class="c">S3</td><td class="dots">●●●</td><td class="dots">●●●</td><td class="dots">●●●</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<!-- ================= ترتیب اجرای واقعی ================= -->
+<h2 class="sec" id="sec-order">ترتیب اجرای واقعی</h2>
+
+<p>اما یک نکته خیلی مهم:</p>
+
+<p><strong>این‌ها را نباید همزمان بسازید.</strong></p>
+
+<p>من برای مش این ترتیب را پیشنهاد می‌کنم:</p>
+
+<h3>Sprint 1</h3>
+
+<p><strong>Make people understand + find</strong></p>
+
+<blockquote><p>Positioning → Education → SEO → Discovery → Trust → Lead Capture</p></blockquote>
+
+<h3>Sprint 2</h3>
+
+<p><strong>Make people buy + succeed</strong></p>
+
+<blockquote><p>Onboarding → Recommendation → Product Page → Checkout → Purchase → Activation → First Value</p></blockquote>
+
+<h3>Sprint 3</h3>
+
+<p><strong>Make people come back + bring others</strong></p>
+
+<blockquote><p>Dashboard → Reviews → Cross-sell → Bundles → Referral → Community → Analytics → Growth loops</p></blockquote>
+
+<hr>
+
+<!-- ================= KPI اصلی هر Sprint ================= -->
+<h2 class="sec" id="sec-kpi">KPI اصلی هر Sprint</h2>
+
+<p>برای اینکه پروژه درگیر «ساختن قابلیت‌های زیاد» نشود:</p>
+
+<h3>Sprint 1</h3>
+
+<p><strong>North Star: Qualified Buyer Activation</strong></p>
+
+<p>یعنی چند نفر از ترافیک واردشده واقعاً به خریدار بالقوه تبدیل شدند.</p>
+
+<h3>Sprint 2</h3>
+
+<p><strong>North Star: First Successful Purchase</strong></p>
+
+<p>نه صرفاً تعداد checkout.</p>
+
+<p>یعنی:</p>
+
+<blockquote><p>کاربر محصول مناسب را پیدا کرد → خرید کرد → محصول را دریافت کرد → به اولین ارزش رسید.</p></blockquote>
+
+<h3>Sprint 3</h3>
+
+<p><strong>North Star: Repeat Buyer Rate</strong></p>
+
+<p>یعنی:</p>
+
+<blockquote><p>چند درصد خریداران بعد از اولین خرید، دوباره از مش خرید می‌کنند؟</p></blockquote>
+
+<p>و در کنار آن:</p>
+
+<ul>
+  <li>Repeat purchase</li>
+  <li>AOV</li>
+  <li>LTV</li>
+  <li>Referral rate</li>
+  <li>Review rate</li>
+  <li>Product activation</li>
+  <li>Revenue per buyer</li>
+</ul>
+
+<hr>
+
+<!-- ================= اصل مهم ================= -->
+<h2 class="sec" id="sec-principle">و یک اصل بسیار مهم برای مش</h2>
+
+<p>من پیشنهاد می‌کنم از اینجا به بعد <strong>هر قابلیت جدید Buyer را با این سؤال بسنجیم:</strong></p>
+
+<blockquote><p>آیا این قابلیت کاربر را یک قدم به «پیدا کردن محصول مناسب، خرید، رسیدن به نتیجه، خرید بعدی یا معرفی مش» نزدیک می‌کند؟</p></blockquote>
+
+<p>اگر جواب نه باشد، احتمالاً فعلاً نباید ساخته شود.</p>
+
+<p>این سه Sprint در واقع اسکلت کامل <strong>Buyer Growth System</strong> مش هستند؛ بعد از این می‌توانیم هر Sprint را دقیقاً مثل Creator A1 تا A5 باز کنیم و <strong>Epic → Feature → UX → Backend → Frontend → Admin → Automation → Analytics → KPI → Acceptance Criteria</strong> را فریز کنیم و سپس برای هرکدام پرامپت اجرایی دقیق به ایجنت بدهیم.</p>
+
+</main>
+
+<footer>
+  ماشین درآمد خریدار MESH — نقشه کامل Buyer Marketing · بازتولید کامل محتوای فایل «buyer marketing.txt» در قالب HTML فارسی و راست‌به‌چپ
+</footer>
+
+</div>
+</body>
+</html>
